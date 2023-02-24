@@ -1,6 +1,7 @@
 package utilities;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.interactions.Actions;
@@ -172,6 +173,61 @@ public class ReusableMethods {
         int optionIndex = 1 + random.nextInt(weblist.size() - 1);
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
+    }
+    /**
+     * Verifies whether the element matching the provided locator is displayed on page
+     * fails if the element matching the provided locator is not found or not displayed
+     *
+     * @param by
+     */
+    public static void verifyElementDisplayed(By by) {
+        try {
+            Assert.assertTrue("Element not visible: " + by, Driver.getDriver().findElement(by).isDisplayed());
+        } catch (NoSuchElementException e) {
+            Assert.fail("Element not found: " + by);
+        }
+    }
+
+    /**
+     * Verifies whether the element matching the provided locator is NOT displayed on page
+     * fails if the element matching the provided locator is not found or not displayed
+     *
+     * @param by
+     */
+    public static void verifyElementNotDisplayed(By by) {
+        try {
+            Assert.assertFalse("Element should not be visible: " + by, Driver.getDriver().findElement(by).isDisplayed());
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Verifies whether the element matching the provided WebElement is NOT displayed on page
+     * fails if the element matching the WebElement is not found or not displayed
+     *
+     * @paramWebElement
+     */
+    public static void verifyElementNotDisplayed(WebElement element) {
+        try {
+            Assert.assertFalse("Element should not be visible: " + element, element.isDisplayed());
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Verifies whether the element is displayed on page
+     * fails if the element is not found or not displayed
+     *
+     * @param element
+     */
+    public static void verifyElementDisplayed(WebElement element) {
+        try {
+            Assert.assertTrue("Element not visible: " + element, element.isDisplayed());
+        } catch (NoSuchElementException e) {
+            Assert.fail("Element not found: " + element);
+        }
     }
 
 }
