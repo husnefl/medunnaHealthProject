@@ -1,5 +1,5 @@
-@us_12_13_medunnadoctor
-Feature: US_12_medunna_doctor
+@us_13_TC02
+Feature: US_13_medunna_doctor_TC02
 
   Background: Signin Medunna
     Given user is on "https://medunna.com" page
@@ -13,13 +13,6 @@ Feature: US_12_medunna_doctor
     And clicks on edit button to create or edit an appointment
 
 
-    Scenario: US12_TC01_Populate info in appointment
-      Then  verifies patient's id,start datetime and end datetime, status
-      And  Doctor fills in required fields, anemnesis, treatment, diagnosis
-      And  click on save button
-      Then Verify appointment is saved successfully
-      Then click on user icon
-
-
-
-
+  Scenario: US13_TC02_Doctor request test
+    And click on "Request A Test" button
+    Then verify "Glucose" "Urea" "Creatinine" "Sodium Potassium" "Total protein" "Albumin"  "Hemoglobin" has checkmark options

@@ -11,9 +11,9 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class US_12_page {
+public class US_12_13_page {
 
-    public US_12_page() {
+    public US_12_13_page() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -101,12 +101,24 @@ public class US_12_page {
     @FindBy(xpath = "//select[@id='appointment-status']//option")
     public List<WebElement> appointmentstatusdropdownlist;
 
+    @FindBy (xpath = "//*[text()='Request A Test']")
+    public WebElement requestatestButton;
+
+    @FindBy(xpath = "//*[@class='is-untouched is-pristine av-valid form-check-input']")
+    public WebElement insulinCheckBox;
+
+    @FindBy(xpath = "//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
+    public WebElement testCreatedSuccessMessage;
+
+    @FindBy(xpath = "//table//tr//td[9]")
+    public List<WebElement> checkBoxes;
 
 
 
 
+////div[@class='btn-group flex-btn-group-container'
 
 
-
+//table//tr//td[9]
 }
 
