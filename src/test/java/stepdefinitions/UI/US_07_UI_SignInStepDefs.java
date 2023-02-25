@@ -107,10 +107,9 @@ public class US_07_UI_SignInStepDefs {
     }
 
 
-    @And("close the application")
-    public void closeTheApplication() {
+    @And("Close Application")
+    public void closeApplication() {
         ReusableMethods.waitFor(3);
         Driver.closeDriver();
     }
-
 }
