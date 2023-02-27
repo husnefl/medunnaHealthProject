@@ -10,6 +10,7 @@ import io.restassured.specification.RequestSpecification;
 import pojos.MedunnaUsersPojo;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 import static utilities.AuthenticationMedunna.generateToken;
 
 public class US_01_TC_05UserApiPostStepDefs {
