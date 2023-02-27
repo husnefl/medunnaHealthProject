@@ -13,103 +13,93 @@ import utilities.ReusableMethods;
 public class US_07_UI_SignInStepDefs {
     US_07_HomePage us_07_homePage =new US_07_HomePage();
     US_07_LoginPage us_07_loginPage = new US_07_LoginPage();
+    
 
 
-    @Given("user is on {string} page")
-    public void user_is_on_page(String string) {
-        ReusableMethods.waitFor(1);
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
 
+    @Then("Close Application{int}")
+    public void closeApplication(int arg0) {
+        ReusableMethods.waitFor(3);
+        Driver.closeDriver();
     }
 
-    @When("click on user icon on menu")
-    public void clickOnUserIconOnMenu() {
+    @When("click on user icon on menu{int}")
+    public void clickOnUserIconOnMenu(int arg0) {
         ReusableMethods.waitFor(1);
         us_07_homePage.userIcon.click();
     }
 
-
-    @When("click on Sign In option")
-    public void click_on_sign_in_option() {
+    @And("click on Sign In option{int}")
+    public void clickOnSignInOption(int arg0) {
         ReusableMethods.waitFor(1);
         us_07_homePage.signInOption.click();
     }
 
-    @And("enter registered username")
-    public void enterRegisteredUsername() {
+    @And("enter registered username{int}")
+    public void enterRegisteredUsername(int arg0) {
         ReusableMethods.waitFor(1);
         us_07_loginPage.usernameInput.sendKeys(ConfigReader.getProperty("patientUsername07"));
     }
 
-    @And("enter registered  password")
-    public void enterRegisteredPassword() {
+    @And("enter registered  password{int}")
+    public void enterRegisteredPassword(int arg0) {
         ReusableMethods.waitFor(1);
         us_07_loginPage.passwordInput.sendKeys(ConfigReader.getProperty("patientPassword07"));
-
     }
-    @When("click on Sign In submit button")
-    public void click_on_sign_in_submit_button() {
+
+    @And("click on Sign In submit button{int}")
+    public void clickOnSignInSubmitButton(int arg0) {
         ReusableMethods.waitFor(1);
         us_07_loginPage.signInSubmitButton.click();
     }
 
-    @When("Click On User  Registered User Name icon")
-    public void clickOnUserRegisteredUserNameIcon() {
+    @When("Click On User  Registered User Name icon{int}")
+    public void clickOnUserRegisteredUserNameIcon(int arg0) {
         ReusableMethods.waitFor(1);
-
         us_07_loginPage.registeredUserName.click();
     }
 
-
-    @And("Click Setting")
-    public void clickSetting() {
+    @And("Click Setting{int}")
+    public void clickSetting(int arg0) {
         ReusableMethods.waitFor(1);
         us_07_loginPage.userSetting.click();
-
     }
 
-
-
-    @And("Edit the first name")
-    public void editTheFirstName() {
-        ReusableMethods.waitFor(1);
+    @And("Edit the first name{int}")
+    public void editTheFirstName(int arg0) {
         us_07_loginPage.editedFirstName.clear();
         us_07_loginPage.editedFirstName.sendKeys(ConfigReader.getProperty("patientEditedUserame07"));
     }
 
-    @And("Edit the last name")
-    public void editTheLastName() {
-        ReusableMethods.waitFor(1);
-        us_07_loginPage.editedLastName.clear();
-        us_07_loginPage.editedLastName.sendKeys(ConfigReader.getProperty("patientEditedLastname07"));
-    }
-
-    @And("Edit the email")
-    public void editTheEmail() {
-        ReusableMethods.waitFor(1);
-        us_07_loginPage.editedEmail.clear();
-        us_07_loginPage.editedEmail.sendKeys(ConfigReader.getProperty("patientEditedEmail07"));
-
-    }
-
-    @And("Click save button")
-    public void clickSaveButton() {
+    @And("Click save button{int}")
+    public void clickSaveButton(int arg0) {
         ReusableMethods.waitFor(1);
         us_07_loginPage.saveButton.click();
 
     }
 
+    @And("Edit the last name{int}")
+    public void editTheLastName(int arg0) {
+        us_07_loginPage.editedLastName.clear();
+        us_07_loginPage.editedLastName.sendKeys(ConfigReader.getProperty("patientEditedLastname07"));
+    }
 
-    @Then("Verify  Setting saved is displayed")
-    public void verifySettingSavedIsDisplayed() {
+    @Then("Verify  Setting saved is displayed{int}")
+    public void verifySettingSavedIsDisplayed(int arg0) {
         ReusableMethods.waitFor(1);
         us_07_loginPage.settingSavedAlert.isDisplayed();
     }
 
 
-    @And("Close Application")
-    public void closeApplication() {
-        ReusableMethods.waitFor(3);
-        Driver.closeDriver();
+    @Given("user is medunnaUrl url{int}")
+    public void userIsMedunnaUrlUrl(int arg0) {
+        ReusableMethods.waitFor(1);
+        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
+    }
+
+    @And("Edit the email{int}")
+    public void editTheEmail(int arg0) {
+        us_07_loginPage.editedEmail.clear();
+        us_07_loginPage.editedEmail.sendKeys(ConfigReader.getProperty("patientEditedEmail07"));
     }
 }
