@@ -32,19 +32,28 @@ public class US_06_AppointmentPage {
     public WebElement appointmentSubmitButton;
 
     @FindBy(xpath = "//div[text()='Your FirstName is required.']")
-    public WebElement firstNameWarningMessage;
+    public WebElement firstNameBlankMessage;
 
     @FindBy(xpath = "//div[text()='Your LastName is required.']")
-    public WebElement lastNameWarningMessage;
+    public WebElement lastNameBlankMessage;
 
     @FindBy(xpath = "//div[text()='Email is already in use!']")
     public WebElement differentSSNWarningMessage;
 
     @FindBy(xpath = "//div[text()='Your SSN is required.']")
-    public WebElement ssnWarningMessage;
+    public WebElement ssnBlankMessage;
 
     @FindBy(xpath = "//div[text()='Your email is required.']")
-    public WebElement emailWarningMessage;
+    public WebElement emailBlankMessage;
+
+    @FindBy(xpath = "//div[text()='This field is invalid']")
+    public WebElement invalidEmailMessage;
+
+    @FindBy(xpath = "//div[text()='Phone number is invalid']")
+    public WebElement invalidPhoneMessage;
+
+    @FindBy(xpath = "//div[text()='Phone number is required.']")
+    public WebElement phoneBlankMessage;
 
 
 }

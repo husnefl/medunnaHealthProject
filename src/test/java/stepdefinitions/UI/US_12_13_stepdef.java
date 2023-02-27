@@ -21,55 +21,55 @@ public class US_12_13_stepdef {
     //pageleri obj create etmeyi unutma
     US_12_13_page us_12_13_page =new US_12_13_page();
 
-    @Given("user is on {string} page")
+    @Given("user is on {string} page12")
     public void user_is_on_page(String string) {
         Driver.getDriver().get(string);
 
     }
-    @When("click on user icon")
+    @When("click on user icon12")
     public void click_on_user_icon() {
         ReusableMethods.waitFor(1);
         us_12_13_page.userIcon.click();
 
     }
-    @When("click on Sign In option")
+    @When("click on Sign In option12")
     public void click_on_sign_in_option() {
         ReusableMethods.waitFor(1);
         us_12_13_page.signInOption.click();
     }
-    @When("enter {string} in username input")
+    @When("enter {string} in username input12")
     public void enter_in_username_input(String username) {
         ReusableMethods.waitFor(1);
         us_12_13_page.usernameInput.sendKeys(username);
     }
-    @When("enter {string} in password input")
+    @When("enter {string} in password input12")
     public void enter_in_password_input(String password) {
         ReusableMethods.waitFor(1);
         us_12_13_page.passwordInput.sendKeys(password);
     }
-    @When("click on Sign In submit button")
+    @When("click on Sign In submit button12")
     public void click_on_sign_in_submit_button() {
         ReusableMethods.waitFor(1);
         us_12_13_page.signInSubmitButton.click();
     }
-    @When("click on MY PAGES")
+    @When("click on MY PAGES12")
     public void click_on_my_pages() {
         ReusableMethods.waitFor(1);
         us_12_13_page.mypagesbutton.click();
 
 
     }
-    @When("click on My Appointments")
+    @When("click on My Appointments12")
     public void click_on_my_appointments() {
         ReusableMethods.waitFor(1);
         us_12_13_page.myappointments.click();
     }
-    @When("clicks on edit button to create or edit an appointment")
+    @When("clicks on edit button to create or edit an appointment12")
     public void clicks_on_edit_button_to_create_or_edit_an_appointment() {
         ReusableMethods.waitFor(1);
         us_12_13_page.editbutton.click();
     }
-    @Then("verifies patient's id,start datetime and end datetime, status")
+    @Then("verifies patient's id,start datetime and end datetime, status12")
     public void verifies_patient_s_id_start_datetime_and_end_datetime_status() {
         ReusableMethods.waitFor(1);
         Assert.assertTrue(us_12_13_page.hastaid.isDisplayed());
@@ -79,7 +79,7 @@ public class US_12_13_stepdef {
 
 
     }
-    @Then("Doctor fills in required fields, anemnesis, treatment, diagnosis")
+    @Then("Doctor fills in required fields, anemnesis, treatment, diagnosis12")
     public void doctor_fills_in_required_fields_anemnesis_treatment_diagnosis() {
         ReusableMethods.waitFor(1);
         us_12_13_page.anamnesisfield.clear();
@@ -91,13 +91,13 @@ public class US_12_13_stepdef {
 
 
     }
-    @Then("click on save button")
+    @Then("click on save button12")
     public void click_on_save_button() {
         ReusableMethods.waitFor(1);
         JSUtils.clickElementByJS(us_12_13_page.saveappoinmentbutton);
 
     }
-    @Then("Verify appointment is saved successfully")
+    @Then("Verify appointment is saved successfully12")
     public void verify_appointment_is_saved_successfully() {
         ReusableMethods.waitFor(1);
         String text= us_12_13_page.appointmentstextondoctorsappoinmentspage.getText();
@@ -106,7 +106,7 @@ public class US_12_13_stepdef {
 
     //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02
 
-    @Then("verify patient's id;")
+    @Then("verify patient's id;12")
     public void verify_patient_s_id() {
         ReusableMethods.waitFor(1);
 
@@ -117,7 +117,7 @@ public class US_12_13_stepdef {
 
 
     }
-    @Then("verify patient's start date time;")
+    @Then("verify patient's start date time;12")
     public void verify_patient_s_start_date_time() {
 
         ReusableMethods.waitFor(1);
@@ -128,7 +128,7 @@ public class US_12_13_stepdef {
 
 
     }
-    @Then("verify patient's end date time;")
+    @Then("verify patient's end date time;12")
     public void verify_patient_s_end_date_time() {
         ReusableMethods.waitFor(1);
         String Textenddatefield=JSUtils.getValueInStringByJS("appointment-endDate");
@@ -137,7 +137,7 @@ public class US_12_13_stepdef {
         Assert.assertEquals("2023-02-21T19:00",Textenddatefield);
 
     }
-    @Then("verify patient's status;")
+    @Then("verify patient's status;12")
     public void verify_patient_s_status() {
         ReusableMethods.waitFor(1);
         String Textstatusfield=JSUtils.getValueInStringByJS("appointment-status");
@@ -149,7 +149,7 @@ public class US_12_13_stepdef {
     //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02 //TC02
 
 
-    @Then("click on signout")
+    @Then("click on signout12")
     public void click_on_signout() {
         us_12_13_page.signOutOption.click();
 
@@ -157,7 +157,7 @@ public class US_12_13_stepdef {
 
     //TC03 //TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03//TC03
 
-    @Then("verify you see {string} message on empty Anamnesis field when you enter the save button")
+    @Then("verify you see {string} message on empty Anamnesis field when you enter the save button12")
     public void verify_you_see_message_on_empty_anamnesis_field_when_you_enter_the_save_button(String string) {
 
         ReusableMethods.waitFor(1);
@@ -168,7 +168,7 @@ public class US_12_13_stepdef {
 
     }
 
-    @Then("verify you see {string} message on empty Treatment field when you enter the save button")
+    @Then("verify you see {string} message on empty Treatment field when you enter the save button12")
     public void verify_you_see_message_on_empty_treatment_field_when_you_enter_the_save_button(String string) {
 
         ReusableMethods.waitFor(1);
@@ -177,7 +177,7 @@ public class US_12_13_stepdef {
         Assert.assertTrue(us_12_13_page.emptyfieldmessage.isDisplayed());
     }
 
-    @Then("verify you see {string} message on empty Diagnosis field when you enter the save button")
+    @Then("verify you see {string} message on empty Diagnosis field when you enter the save button12")
     public void verify_you_see_message_on_empty_diagnosis_field_when_you_enter_the_save_button(String string) {
 
         ReusableMethods.waitFor(1);
@@ -193,7 +193,7 @@ public class US_12_13_stepdef {
 
     //TC04  //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04 //TC04
 
-    @Then("verify prescription is optional")
+    @Then("verify prescription is optional12")
     public void verify_prescription_is_optional() {
 
         us_12_13_page.appointmentprescriptionfield.clear();
@@ -208,7 +208,7 @@ public class US_12_13_stepdef {
 
 
     }
-    @Then("verify description is optional")
+    @Then("verify description is optional12")
     public void verify_description_is_optional() {
 
         JSUtils.clickElementByJS(us_12_13_page.editbutton);
@@ -228,7 +228,7 @@ public class US_12_13_stepdef {
 
 
     //TC05//TC05//TC05//TC05//TC05//TC05//TC05//TC05//TC05//TC05//TC05//TC05//TC05//TC05//TC05//TC05
-    @Then("verify Status dropdown has PENDING,COMPLETED AND CANCELLED options")
+    @Then("verify Status dropdown has PENDING,COMPLETED AND CANCELLED options12")
     public void verify_status_dropdown_has_pending_completed_and_cancelled_options() {
 
         List<WebElement> statusdropdownlist= us_12_13_page.appointmentstatusdropdownlist;
@@ -249,7 +249,7 @@ public class US_12_13_stepdef {
 
 
     //us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01
-    @And("click on {string} button")
+    @And("click on {string} button12")
     public void clickOnButton(String arg0) {
         ReusableMethods.waitFor(1);
         us_12_13_page.requestatestButton.click();
@@ -258,7 +258,7 @@ public class US_12_13_stepdef {
     }
 
 
-    @And("click on {string} check mark")
+    @And("click on {string} check mark12")
     public void clickOnCheckMark(String arg0) {
         ReusableMethods.waitFor(1);
         JSUtils.clickElementByJS(us_12_13_page.insulinCheckBox);
@@ -266,14 +266,14 @@ public class US_12_13_stepdef {
 
     }
 
-    @Then("verify user see success popup message")
+    @Then("verify user see success popup message12")
     public void verifyUserSeeSuccessPopupMessage() {
         ReusableMethods.waitFor(1);
         ReusableMethods.verifyElementDisplayed(us_12_13_page.testCreatedSuccessMessage);
 
     }
 
-    @Then("verify {string} {string} {string} {string} {string} {string}  {string} has checkmark options")
+    @Then("verify {string} {string} {string} {string} {string} {string}  {string} has checkmark options12")
     public void verifyHasCheckmarkOptions(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6) {
         List<WebElement> checkboxlist=us_12_13_page.checkBoxes;
         System.out.println(checkboxlist.size());

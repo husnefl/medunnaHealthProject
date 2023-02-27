@@ -2,15 +2,15 @@
 Feature: An admin must activate the registered user otherwise user should not be able to login.
 
   Background:
-    Given user goes to medunna url
-    When clicks on account icon
-    And clicks on user sign in option
-    And send admin username into username input
-    And send admin password into password input
-    And clicks on Sign in button
+    Given user goes to medunna url3
+    When clicks on account icon3
+    And clicks on user sign in option4
+    And send admin username into username input4
+    And send admin password into password input4
+    And clicks on Sign in button4
     And verify administration option is displayed
-    And click on administration option
-    And click on user management link
+    And click on administration option4
+    And click on user management link4
     And goes to activation page url
 
   Scenario: TC_01 Admin user should activate the registered patient
@@ -21,7 +21,7 @@ Feature: An admin must activate the registered user otherwise user should not be
      Then verify user updated message is displayed
     And click on adminTeam03
     And click on sign out
-    And close the application
+    And close the application3
 
   Scenario: TC_02 Admin user should activate the registered staff
     And click on deactivated registered "staff" edit button
@@ -31,7 +31,7 @@ Feature: An admin must activate the registered user otherwise user should not be
     Then verify user updated message is displayed
     And click on adminTeam03
     And click on sign out
-    And close the application
+    And close the application3
 
   Scenario: TC_03 Admin user should activate the registered doctor
      And click on deactivated registered "doctor" edit button
@@ -41,7 +41,7 @@ Feature: An admin must activate the registered user otherwise user should not be
      Then verify user updated message is displayed
     And click on adminTeam03
     And click on sign out
-     And close the application
+     And close the application3
 
   Scenario: TC_04 Admin user should activate the registered user
     And click on deactivated registered "user" edit button
@@ -51,4 +51,4 @@ Feature: An admin must activate the registered user otherwise user should not be
     Then verify user updated message is displayed
     And click on adminTeam03
     And click on sign out
-    And close the application
+    And close the application3
