@@ -91,6 +91,7 @@ public class US_07_UI_SignInStepDefs {
     }
 
 
+
     @Given("user is medunnaUrl url{int}")
     public void userIsMedunnaUrlUrl(int arg0) {
         ReusableMethods.waitFor(1);
@@ -102,4 +103,11 @@ public class US_07_UI_SignInStepDefs {
         us_07_loginPage.editedEmail.clear();
         us_07_loginPage.editedEmail.sendKeys(ConfigReader.getProperty("patientEditedEmail07"));
     }
+
+    @And("Close Application")
+    public void closeApplication() {
+        ReusableMethods.waitFor(3);
+        Driver.closeDriver();
+    }
+
 }

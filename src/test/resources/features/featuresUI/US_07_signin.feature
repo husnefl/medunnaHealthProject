@@ -33,10 +33,19 @@ Feature: User info segment (User Settings) should be editable on Homepage
 
 
   Scenario:TC_04 There should be an option to update email
+
     When Click On User  Registered User Name icon07
     And Click Setting07
     And Edit the email07
     And Click save button07
     Then Verify  Setting saved is displayed07
     Then Close Application07
+
+    When Click On User  Registered User Name icon
+    And Click Setting
+    And Edit the email
+    And Click save button
+    Then Verify  Setting saved is displayed
+    And Close Application
+
 

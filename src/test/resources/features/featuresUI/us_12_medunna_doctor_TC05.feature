@@ -1,5 +1,5 @@
-@us_12_13_medunnadoctor
-Feature: US_12_medunna_doctor
+@us_12_13_medunnadoctor_TC05
+Feature: US_12_medunna_doctor_TC05
 
   Background: Signin Medunna
     Given user is on "https://medunna.com" page12
@@ -12,14 +12,5 @@ Feature: US_12_medunna_doctor
     And click on My Appointments12
     And clicks on edit button to create or edit an appointment12
 
-
-    Scenario: US12_TC01_Populate info in appointment12
-      Then  verifies patient's id,start datetime and end datetime, status12
-      And  Doctor fills in required fields, anemnesis, treatment, diagnosis12
-      And  click on save button12
-      Then Verify appointment is saved successfully12
-      Then click on user icon12
-
-
-
-
+  Scenario: US12_TC05_Status can be only selected as PENDING, COMPLETED or CANCELLED by Doctor
+    Then verify Status dropdown has PENDING,COMPLETED AND CANCELLED options12
