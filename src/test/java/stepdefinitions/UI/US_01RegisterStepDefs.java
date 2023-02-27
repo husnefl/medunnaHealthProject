@@ -21,23 +21,26 @@ public class US_01RegisterStepDefs {
     US_01HomePage us_01HomePage = new US_01HomePage();
     US_01UserManagementPage us_01UserManagementPage = new US_01UserManagementPage();
 
+
+
     @Given("user goes to medunna homePage1")
-    public void user_goes_to_medunna_home_page() {
+    public void user_goes_to_medunna_home_page1() {
 
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
 
     }
-
     @When("user clicks user icon1")
-    public void user_clicks_user_icon() {
+    public void user_clicks_user_icon1() {
         us_01HomePage.userIcon.click();
+
     }
-
-    @And("user clicks Register option1")
-    public void user_clicks_register_option() {
-
+    @When("user clicks Register option1")
+    public void user_clicks_register_option1() {
         us_01HomePage.registerOption.click();
     }
+
+
+
 
     @When("user enters the SSN number {string}")
     public void user_enters_the_ssn_number(String SSN) {
@@ -224,9 +227,5 @@ public class US_01RegisterStepDefs {
 }
 
 
-    @Then("close the application{int}")
-    public void closeTheApplication(int arg0) {
-        Driver.closeDriver();
 
-    }
 }
