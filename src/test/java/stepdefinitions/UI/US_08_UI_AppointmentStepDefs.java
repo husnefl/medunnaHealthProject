@@ -18,131 +18,92 @@ public class US_08_UI_AppointmentStepDefs {
     US_08_AppointmentPage us_08_appointmentPage = new US_08_AppointmentPage();
 
 
-    @And("click My pages\\(Patient) icon")
-    public void clickMyPagesPatientIcon() {
-        us_08_appointmentPage.myPages.click();
-    }
-
-
-    @And("click  Make an Appointment")
-    public void clickMakeAnAppointment() {
-        us_08_appointmentPage.makeAnAppointment.click();
-    }
-
-    @And("enter a phone number")
-    public void enterAPhoneNumber() {
-        us_08_appointmentPage.phoneNumber.sendKeys(ConfigReader.getProperty("patientPhoneNumber08"));
-    }
-
-
-    @And("Click Send an Appointment Request Button")
-    public void clickSendAnAppointmentRequestButton() {
-        ReusableMethods.waitFor(2);
-        us_08_appointmentPage.requestButton.click();
-    }
-
-
-    @When("Click on user icon on menu")
-    public void clickOnUserIconOnMenu() {
+    @When("Click on user icon on menu{int}")
+    public void clickOnUserIconOnMenu(int arg0) {
         ReusableMethods.waitFor(1);
         us_08_appointmentPage.userIcon08.click();
     }
 
-    @And("Click on Sign In option")
-    public void clickOnSignInOption() {
+    @And("Click on Sign In optionHA")
+    public void clickOnSignInOptionHA() {
         ReusableMethods.waitFor(1);
         us_08_appointmentPage.signInOption08.click();
     }
 
-    @And("Enter registered username")
-    public void enterRegisteredUsername() {
-        ReusableMethods.waitFor(1);
-        us_08_appointmentPage.usernameInput08.sendKeys(ConfigReader.getProperty("patientUsername07"));
-    }
-
-    @And("Enter registered  password")
-    public void enterRegisteredPassword() {
-        ReusableMethods.waitFor(1);
-        us_08_appointmentPage.passwordInput08.sendKeys(ConfigReader.getProperty("patientPassword07"));
-    }
-
-    @And("Click on Sign In submit button")
-    public void clickOnSignInSubmitButton() {
-        ReusableMethods.waitFor(1);
-        us_08_appointmentPage.signInSubmitButton08.click();
-    }
-
-
-    @Then("Close the application")
-    public void closeTheApplication() {
-        ReusableMethods.waitFor(3);
-        Driver.closeDriver();
-    }
-
-
-    @And("Enter invalid date")
-    public void enterInvalidDate() {
-        ReusableMethods.waitFor(3);
-        us_08_appointmentPage.appointmentDate.sendKeys(ConfigReader.getProperty("patientAnInvalidDate"));
-    }
-
-
-    @And("Verify the user should be see the past date message")
-    public void verifyTheUserShouldBeSeeThePastDateMessage() {
-        ReusableMethods.waitFor(3);
-        Assert.assertTrue(us_08_appointmentPage.invalidDateMessage.isDisplayed());
-    }
-
-
-    @And("Click appointment button")
-    public void clickAppointmentButton() {
-        ReusableMethods.waitFor(3);
-        us_08_appointmentPage.appointmentDateButton.click();
-    }
-
-    @And("click request button")
-    public void clickRequestButton() {
-        ReusableMethods.waitFor(2);
-        us_08_appointmentPage.requestButton.click();
-    }
-
-
-    @Then("click sign out")
-    public void clickSignOut() {
-        ReusableMethods.waitFor(3);
-        us_08_appointmentPage.signOut.click();
-    }
-
-
-    @And("Verify the user should not be see the past date message")
-    public void verifyTheUserShouldNotBeSeeThePastDateMessage() {
-        ReusableMethods.waitFor(2);
-        Assert.assertTrue(us_08_appointmentPage.requestButtonMessage.isEnabled());
-    }
-
-    @And("Click Sign in Icon")
-    public void clickSignInIcon() {
+    @And("Click Sign in IconHA")
+    public void clickSignInIconHA() {
         ReusableMethods.waitFor(2);
         us_08_appointmentPage.registeredNameIcon.click();
     }
 
-
-    @And("Verify the user should  be see the appointment  message")
-    public void verifyTheUserShouldBeSeeTheAppointmentMessage() {
-        ReusableMethods.waitFor(3);
-        Assert.assertTrue(us_08_appointmentPage.requestButtonMessage.isDisplayed());
+    @And("Enter registered usernameHA")
+    public void enterRegisteredUsernameHA() {
+        ReusableMethods.waitFor(1);
+        us_08_appointmentPage.usernameInput08.sendKeys(ConfigReader.getProperty("patientUsername07"));
     }
 
-    @And("choose a valid date in proper format")
-    public void chooseAValidDateInProperFormat() {
-        ReusableMethods.waitFor(3);
-        us_08_appointmentPage.appointmentDateButton.sendKeys(ConfigReader.getProperty("patientValidDate"));
+    @And("Enter registered  passwordHA")
+    public void enterRegisteredPasswordHA() {
+        ReusableMethods.waitFor(1);
+        us_08_appointmentPage.passwordInput08.sendKeys(ConfigReader.getProperty("patientPassword07"));
     }
 
-    @And("click My pages\\(Patient) menu")
-    public void clickMyPagesPatientMenu() {
+    @And("Click on Sign In submit buttonHA")
+    public void clickOnSignInSubmitButtonHA() {
+        ReusableMethods.waitFor(1);
+        us_08_appointmentPage.signInSubmitButton08.click();
+    }
+
+    @And("click My pages\\(Patient) iconHA")
+    public void clickMyPagesPatientIconHA() {
         ReusableMethods.waitFor(2);
         us_08_appointmentPage.myPages.click();
     }
 
+    @And("click  Make an AppointmentHA")
+    public void clickMakeAnAppointmentHA() {
+        ReusableMethods.waitFor(2);
+        us_08_appointmentPage.makeAnAppointment.click();
+    }
+
+    @And("enter a phone numberHA")
+    public void enterAPhoneNumberHA() {
+        us_08_appointmentPage.phoneNumber.sendKeys(ConfigReader.getProperty("patientPhoneNumber08"));
+    }
+
+    @And("Enter invalid dateHA")
+    public void enterInvalidDateHA() {
+        ReusableMethods.waitFor(3);
+        us_08_appointmentPage.appointmentDate.sendKeys(ConfigReader.getProperty("patientAnInvalidDate"));
+    }
+
+    @And("Click Send an Appointment Request ButtonHA")
+    public void clickSendAnAppointmentRequestButtonHA() {
+        ReusableMethods.waitFor(2);
+        us_08_appointmentPage.requestButton.click();
+    }
+
+    @And("Verify the user should not be see the past date messageHA")
+    public void verifyTheUserShouldNotBeSeeThePastDateMessageHA() {
+        ReusableMethods.waitFor(2);
+        Assert.assertTrue(us_08_appointmentPage.requestButtonMessage.isEnabled());
+    }
+
+    @Then("click sign outHA")
+    public void clickSignOutHA() {
+        ReusableMethods.waitFor(3);
+        us_08_appointmentPage.signOut.click();
+    }
+
+    @And("choose a valid date in proper formatHA")
+    public void chooseAValidDateInProperFormatHA() {
+        ReusableMethods.waitFor(3);
+        us_08_appointmentPage.appointmentDateButton.sendKeys(ConfigReader.getProperty("patientValidDate"));
+    }
+
+    @Then("Verify the user should  be see the appointment  messageHA")
+    public void verifyTheUserShouldBeSeeTheAppointmentMessageHA() {
+        ReusableMethods.waitFor(3);
+        Assert.assertTrue(us_08_appointmentPage.requestButtonMessage.isDisplayed());
+    }
 }
