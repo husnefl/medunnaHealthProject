@@ -38,5 +38,5 @@ Feature: User info segment (User Settings) should be editable on Homepage
     And Edit the email
     And Click save button
     Then Verify  Setting saved is displayed
-    And close the application
+    And Close Application
 
