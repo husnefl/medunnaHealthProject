@@ -17,20 +17,20 @@ public class US_04Stepdefinitions {
 
     US_04ActivationPage us_04ActivationPage = new US_04ActivationPage();
 
-    @When("clicks on user sign in option")
+    @When("clicks on user sign in option4")
     public void clicks_on_user_sign_in_option() {
         us_04ActivationPage.signInOption.click();
     }
 
-    @When("send admin username into username input")
+    @When("send admin username into username input4")
     public void send_admin_username_into_username_input() {
         us_04ActivationPage.usernameInput.sendKeys(ConfigReader.getProperty("username"));
     }
-    @When("send admin password into password input")
+    @When("send admin password into password input4")
     public void send_admin_password_into_password_input() {
         us_04ActivationPage.passwordInput.sendKeys(ConfigReader.getProperty("password"));
     }
-    @When("clicks on Sign in button")
+    @When("clicks on Sign in button4")
     public void clicks_on_sign_in_button() {
         us_04ActivationPage.signInSubmitButton.click();
     }
@@ -38,11 +38,11 @@ public class US_04Stepdefinitions {
     public void verify_administration_option_is_displayed() {
         Assert.assertTrue(us_04ActivationPage.administration.isDisplayed());
     }
-    @When("click on administration option")
+    @When("click on administration option4")
     public void click_on_administration_option() {
         us_04ActivationPage.administration.click();
     }
-    @When("click on user management link")
+    @When("click on user management link4")
     public void click_on_user_management_link() {
         us_04ActivationPage.userManagement.click();
     }
