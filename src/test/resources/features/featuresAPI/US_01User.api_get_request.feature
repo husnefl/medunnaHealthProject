@@ -10,7 +10,7 @@ Feature:Api_Feature
       Then HTTP Status Code should be 200
       Then  Verify response content type is "application/json"
       Then Verify expected values and actual values should be same
-      Then close the application
+      Then close the application1
 
 
 

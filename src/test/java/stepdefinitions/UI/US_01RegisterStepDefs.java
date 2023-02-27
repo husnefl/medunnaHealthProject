@@ -224,8 +224,9 @@ public class US_01RegisterStepDefs {
 }
 
 
-    @And("capture the screenshot")
-    public void captureTheScreenshot() throws IOException {
-        ReusableMethods.getScreenshot("screenshot");
+    @Then("close the application{int}")
+    public void closeTheApplication(int arg0) {
+        Driver.closeDriver();
+
     }
 }
