@@ -2,9 +2,12 @@ package hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
+
+import static base_urls.MedunnaBaseUrl.medunnaSetUp;
 
 public class Hook {
     @After
@@ -17,6 +20,11 @@ public class Hook {
             scenario.attach(failedScreenshot,"image/png","failed_scenario"+scenario.getName()+"");
             Driver.closeDriver();
         }
+    }
+
+    @Before("@MedunnaApiGetTest")
+    public void beforeApi(){// this method will run before TC03_Api
+        medunnaSetUp();
     }
 }
 

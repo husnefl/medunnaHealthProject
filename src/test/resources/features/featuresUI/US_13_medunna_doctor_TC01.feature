@@ -1,5 +1,5 @@
-@us_12_13_medunnadoctor_TC05
-Feature: US_12_medunna_doctor_TC05
+@us_13_TC01
+Feature: US_13_medunna_doctor_TC01
 
   Background: Signin Medunna
     Given user is on "https://medunna.com" page
@@ -12,5 +12,11 @@ Feature: US_12_medunna_doctor_TC05
     And click on My Appointments
     And clicks on edit button to create or edit an appointment
 
-  Scenario: US12_TC05_Status can be only selected as PENDING, COMPLETED or CANCELLED by Doctor
-    Then verify Status dropdown has PENDING,COMPLETED AND CANCELLED options
+
+  Scenario: US13_TC01_Doctor request test
+    And click on "Request A Test" button
+    And click on "Insulin" check mark
+    And click on save button
+    Then   verify user see success popup message
+
+
