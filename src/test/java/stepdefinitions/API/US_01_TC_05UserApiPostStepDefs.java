@@ -10,19 +10,18 @@ import io.restassured.specification.RequestSpecification;
 import pojos.MedunnaUsersPojo;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 import static utilities.AuthenticationMedunna.generateToken;
 
 public class US_01_TC_05UserApiPostStepDefs {
 
-    Response response;
+   Response response;
     MedunnaUsersPojo expectedData;
 
     Faker faker = new Faker();
-    String url;
+   String url;
 
     RequestSpecification spec;
-
-
 
 
         @Given("user set the url for post request")
@@ -33,7 +32,7 @@ public class US_01_TC_05UserApiPostStepDefs {
 
         }
         @Given("Call the Pojo to create new expected data")
-        public void call_the_pojo_to_create_new_expected_data () {
+       public void call_the_pojo_to_create_new_expected_data () {
 
             expectedData = new MedunnaUsersPojo(faker.name().username(), faker.name().firstName(),
                     faker.name().lastName(), faker.idNumber().ssnValid(), faker.internet().emailAddress(), faker.internet().password());
@@ -53,7 +52,7 @@ public class US_01_TC_05UserApiPostStepDefs {
         }
     @Then("Verify expected values and actual values")
     public void verify_expected_values_and_actual_values() {
-        MedunnaUsersPojo actualData = response.as(MedunnaUsersPojo.class);
+       MedunnaUsersPojo actualData = response.as(MedunnaUsersPojo.class);
         System.out.println("actualData  =  " + actualData);
 
         assertEquals(expectedData.getLogin(),actualData.getLogin());
@@ -63,8 +62,4 @@ public class US_01_TC_05UserApiPostStepDefs {
         assertEquals(expectedData.getEmail(),actualData.getEmail());
     }
 
-
-
 }
-
-

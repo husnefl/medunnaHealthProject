@@ -92,12 +92,6 @@ public class US_07_UI_SignInStepDefs {
 
 
 
-    @Given("user is medunnaUrl url{int}")
-    public void userIsMedunnaUrlUrl(int arg0) {
-        ReusableMethods.waitFor(1);
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
-    }
-
     @And("Edit the email{int}")
     public void editTheEmail(int arg0) {
         us_07_loginPage.editedEmail.clear();
@@ -110,4 +104,9 @@ public class US_07_UI_SignInStepDefs {
         Driver.closeDriver();
     }
 
+    @Given("user is {string} url{int}")
+    public void userIsUrl(String arg0, int arg1) {
+        ReusableMethods.waitFor(1);
+        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
+    }
 }
