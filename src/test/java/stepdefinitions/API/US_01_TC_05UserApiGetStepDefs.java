@@ -87,14 +87,11 @@ public class US_01_TC_05UserApiGetStepDefs {
         }
 
 
-        @Then("close the application")
+        @Then("close the application1")
         public void closeTheApplication() {
             Driver.closeDriver();
 
         }
-
-
-
 
 
 
