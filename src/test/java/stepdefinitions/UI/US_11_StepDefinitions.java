@@ -78,6 +78,7 @@ public class US_11_StepDefinitions {
 
     @Then("close the application.1")
     public void close_the_application() {
+
         Driver.closeDriver();
     }
 
@@ -85,6 +86,10 @@ public class US_11_StepDefinitions {
     public void verify_that_patient_id_start_date_end_date_status() throws InterruptedException {
         Thread.sleep(1000);
         assertTrue(us_11_doctorApptPage.idButton.isDisplayed());
+        assertTrue(us_11_doctorApptPage.startDateTimeButton.isDisplayed());
+        assertTrue(us_11_doctorApptPage.endDateTimeButton.isDisplayed());
+        assertTrue(us_11_doctorApptPage.status.isDisplayed());
+
 
     }
 }
