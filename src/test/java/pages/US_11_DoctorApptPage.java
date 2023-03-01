@@ -30,7 +30,7 @@ public class US_11_DoctorApptPage {
     @FindBy(xpath = "//h2[@id ='appointment-heading']")
     public WebElement myAppointmentsPage;
 
-    @FindBy(xpath = "//select[@id=\"appointment-status\"]")
+    @FindBy(xpath = "//span[text()='Status']")
     public WebElement status;
     @FindBy(xpath = "//*[text()='ID']")
     public WebElement idButton;
@@ -40,6 +40,8 @@ public class US_11_DoctorApptPage {
 
     @FindBy(xpath = "//*[text()='End DateTime']")
     public WebElement endDateTimeButton;
+
+
 
 
 }
