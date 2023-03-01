@@ -4,7 +4,7 @@ Feature: User info segment (User Settings) should be editable on Homepage
 
 
   Scenario:TC_01 Signin Medunna
-    Given user is medunnaUrl url7
+    Given user is "https://www.medunna.com/" url7
     When click on user icon on menu07
     And click on Sign In option07
     And enter registered username07
@@ -13,13 +13,12 @@ Feature: User info segment (User Settings) should be editable on Homepage
 
 
   Scenario:TC_02 There should be an option to update firstname
-    Given user is medunnaUrl url7
+    Given user is "https://www.medunna.com/" url7
     When Click On User  Registered User Name icon07
     And Click Setting07
     And Edit the first name07
     And Click save button07
     Then Verify  Setting saved is displayed07
-
 
 
 
@@ -41,11 +40,5 @@ Feature: User info segment (User Settings) should be editable on Homepage
     Then Verify  Setting saved is displayed07
     Then Close Application07
 
-    When Click On User  Registered User Name icon
-    And Click Setting
-    And Edit the email
-    And Click save button
-    Then Verify  Setting saved is displayed
-    And Close Application
 
 
