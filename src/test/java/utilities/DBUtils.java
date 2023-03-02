@@ -19,7 +19,7 @@ public class DBUtils {
     public static void createConnection() {
         String url = "jdbc:postgresql://157.230.48.97:5432/medunna_db_v2";
         String username="select_user";
-        String password=" Medunna_pass_@6";
+        String password="Medunna_pass_@6";
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
