@@ -18,11 +18,14 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions","hooks"},
         dryRun = false,
-<<<<<<< HEAD
+
+         // tags = "@US08"
+
         tags = "@email_validation_api"
-=======
+
           tags = "@us_12_13_medunnadoctor_TC05"
->>>>>>> 9ed12f9e61214ad0cad566a348c1981ae84e35db
+
+
 )
 public class Runner {
 
