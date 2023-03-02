@@ -3,7 +3,7 @@ Feature:Api_Feature
 
   @Api
   @GetRegistrantRequirement
-  Scenario:US_01_TC05_Get_Request
+  Scenario:US_TC05_Get_Request
       Given user set the url "https://medunna.com/api/user?ssn=481-15-3553"
       And Call the Pojo to create expected data
       And sends a get-request to get all registrant data

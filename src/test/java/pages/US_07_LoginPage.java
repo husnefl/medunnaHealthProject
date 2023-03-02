@@ -42,5 +42,4 @@ public class US_07_LoginPage {
     @FindBy(xpath = "//input[@name='email']")
     public WebElement editedEmail;
 
-
 }

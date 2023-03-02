@@ -5,13 +5,7 @@ package pojos;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-
-
-
-//import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
-
-public class MedunnaUsersPojo {
+public class US_01MedunnaUsersPojo {
 
     private String login;
     private String firstName;
@@ -22,7 +16,7 @@ public class MedunnaUsersPojo {
 
 
 
-    public MedunnaUsersPojo(String login, String firstName, String lastName, String ssn, String email, String password) {
+    public US_01MedunnaUsersPojo(String login, String firstName, String lastName, String ssn, String email, String password) {
         this.login = login;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -31,7 +25,7 @@ public class MedunnaUsersPojo {
         this.password = password;
     }
 
-    public MedunnaUsersPojo() {
+    public US_01MedunnaUsersPojo() {
     }
 
     public String getLogin() {
@@ -93,27 +87,6 @@ public class MedunnaUsersPojo {
                 ", password='" + password + '\'' +
                 '}';
     }
-
-    /*
-     {
-    "id": 5781,
-    "login": "doctorcruise",
-    "firstName": "Tom",
-    "lastName": "Cruise",
-    "ssn": "481-15-3553",
-    "email": "cruise@gmail.com",
-    "imageUrl": null,
-    "activated": false,
-    "langKey": null,
-    "createdBy": null,
-    "createdDate": null,
-    "lastModifiedBy": null,
-    "lastModifiedDate": null,
-    "authorities": null
-}
-
-   */
-
 
 
 }
