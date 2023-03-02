@@ -12,10 +12,10 @@ public class US_07_HomePage {
     }
 
     @FindBy(id = "account-menu")
-    public WebElement userIcon;
+    public WebElement userIconha;
 
     @FindBy(id = "login-item")
-    public WebElement signInOption;
+    public WebElement signInOptionha;
 
 
 

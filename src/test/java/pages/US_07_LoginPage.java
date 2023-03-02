@@ -12,35 +12,35 @@ public class US_07_LoginPage {
     }
 
     @FindBy(id = "username")
-    public WebElement usernameInput;
+    public WebElement usernameInputha;
 
     @FindBy(id = "password")
-    public WebElement passwordInput;
+    public WebElement passwordInputha;
 
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement signInSubmitButton;
+    public WebElement signInSubmitButtonha;
 
 
     @FindBy(xpath = "//*[@id=\"account-menu\"]/a/span")
-    public WebElement registeredUserName;
+    public WebElement registeredUserNameha;
 
     @FindBy(xpath = "//span[.='Settings']")
-    public WebElement userSetting;
+    public WebElement userSettingha;
 
     @FindBy(xpath = "//input[@name='firstName']")
-    public WebElement editedFirstName;
+    public WebElement editedFirstNameha;
 
     @FindBy(xpath = "//input[@name='lastName']")
-    public WebElement editedLastName;
+    public WebElement editedLastNameha;
 
     @FindBy(xpath = "//span[.='Save']")
-    public WebElement saveButton;
+    public WebElement saveButtonha;
 
     @FindBy(xpath = "//h2[@id='settings-title']")
-    public WebElement settingSavedAlert;
+    public WebElement settingSavedAlertha;
 
     @FindBy(xpath = "//input[@name='email']")
-    public WebElement editedEmail;
+    public WebElement editedEmailha;
 
 
 }
