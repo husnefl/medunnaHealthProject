@@ -15,24 +15,12 @@ import utilities.ReusableMethods;
 public class US_05_StepDefinition {
     US_05_HomePage us_05_homePage = new US_05_HomePage();
     US_05_LoginPage us_05_loginPage=new US_05_LoginPage();
-
     @Given("user navigate to {string} pageYA")
     public void user_navigate_to_pageYA(String string) {
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
     }
     @When("user click on user icon optionYA")
     public void user_click_on_user_icon_optionYA() {
-
-
-    @Given("user navigate to {string} page5")
-    public void user_navigate_to_page(String string) {
-
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
-    }
-
-    @When("user click on user icon option5")
-    public void user_click_on_user_icon_option() {
-
         ReusableMethods.waitFor(3);
         us_05_homePage.userIcon.click();
     }
@@ -40,16 +28,10 @@ public class US_05_StepDefinition {
     public void user_click_on_sign_in_optionYA() {
         us_05_homePage.signInOption.click();
     }
-
     @When("user enter valid usernameYA")
     public void user_enter_valid_usernameYA() {
-
-
-    @When("user enter valid username5")
-    public void user_enter_valid_username() {
-
-       ReusableMethods.waitFor(2);
-       us_05_loginPage.userNameInput.sendKeys(ConfigReader.getProperty("patientUsername5"));
+        ReusableMethods.waitFor(2);
+        us_05_loginPage.userNameInput.sendKeys(ConfigReader.getProperty("patientUsername5"));
     }
     @When("user enter valid passwordYA")
     public void user_enter_valid_passwordYA() {
@@ -58,11 +40,11 @@ public class US_05_StepDefinition {
     }
     @When("user click on remember me buttonYA")
     public void user_click_on_remember_me_buttonYA() {
-      us_05_loginPage.rememberMeBox.click();
+        us_05_loginPage.rememberMeBox.click();
     }
     @When("user click on sign in submit buttonYA")
     public void user_click_on_sign_in_submit_buttonYA() {
-       us_05_loginPage.signInSubmitButton.click();
+        us_05_loginPage.signInSubmitButton.click();
     }
     @Then("verify user logged in with valid credentials and Welcome to medunna on the pageYA")
     public void verifyUserLoggedInWithValidCredentialsAndWelcomeToMedunnaOnThePageYA() {
@@ -124,7 +106,7 @@ public class US_05_StepDefinition {
         us_05_loginPage.userNameInput.click();
         ReusableMethods.waitFor(3);
         //Assert.assertEquals("HastaBerfin", ?);
-       // Assert.assertEquals("merhaba-21",us_05_loginPage.passwordInput.getText());
+        // Assert.assertEquals("merhaba-21",us_05_loginPage.passwordInput.getText());
     }
 
     @Then("verify Register a new account link option is on the pageYA")
@@ -134,8 +116,8 @@ public class US_05_StepDefinition {
     }
     @And("user click on the Register a new account linkYA")
     public void userClickOnTheRegisterANewAccountLinkYA() {
-       ReusableMethods.waitFor(2);
-       JSUtils.clickElementByJS(us_05_loginPage.registerLink);
+        ReusableMethods.waitFor(2);
+        JSUtils.clickElementByJS(us_05_loginPage.registerLink);
     }
 
     @Then("verify user is taken to Registration pageYA")
