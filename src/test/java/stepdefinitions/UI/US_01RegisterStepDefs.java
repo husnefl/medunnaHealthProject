@@ -7,33 +7,35 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import pages.US_01HomePage;
-import pages.US_01UserManagementPage;
+import pages.US_0102HomePage;
+import pages.US_0102UserManagementPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.JSUtils;
 import utilities.ReusableMethods;
 
-import java.io.IOException;
-
 public class US_01RegisterStepDefs {
 
-    US_01HomePage us_01HomePage = new US_01HomePage();
-    US_01UserManagementPage us_01UserManagementPage = new US_01UserManagementPage();
 
-    @Given("user goes to medunna homePage1")
+
+    US_0102HomePage us_01HomePage = new US_0102HomePage();
+    US_0102UserManagementPage us_01UserManagementPage = new US_0102UserManagementPage();
+
+   static String userEmail;
+
+    @Given("user goes to medunna homePage")
     public void user_goes_to_medunna_home_page() {
 
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
 
     }
 
-    @When("user clicks user icon1")
+    @When("user clicks user icon")
     public void user_clicks_user_icon() {
         us_01HomePage.userIcon.click();
     }
 
-    @And("user clicks Register option1")
+    @And("user clicks Register option")
     public void user_clicks_register_option() {
 
         us_01HomePage.registerOption.click();
@@ -51,11 +53,9 @@ public class US_01RegisterStepDefs {
             us_01HomePage.invalidSSNText.isDisplayed();
             System.out.println(us_01HomePage.ssnNumber.getText().length());
 
-
         }
 
     }
-
     @When("user enters the first name {string}")
     public void user_enters_the_first_name(String firstname) {
 
@@ -68,7 +68,6 @@ public class US_01RegisterStepDefs {
             us_01HomePage.invalidFirstNameText.isDisplayed();
 
         }
-
 
     }
 
@@ -101,19 +100,18 @@ public class US_01RegisterStepDefs {
     }
 
 
-    @When("user clicks the register button1")
+    @When("user clicks the register button")
     public void user_clicks_the_register_button() {
 
         us_01HomePage.registerButton.click();
     }
 
-
-    @When("admin clicks on user icon1")
+    @When("admin clicks on user icon")
     public void adminClicksOnUserIcon() {
 
         us_01HomePage.userIcon.click();
     }
-    @When("admin clicks Sign in option1")
+    @When("admin clicks Sign in option")
     public void user_clicks_sign_in_option() {
 
         us_01HomePage.signInOption.click();
@@ -130,13 +128,13 @@ public class US_01RegisterStepDefs {
     }
 
 
-    @And("admin on Remember Me checkbox1")
+    @And("admin on Remember Me checkbox")
     public void clickOnRememberMeCheckbox() {
 
         us_01HomePage.rememberMeCheckbox.click();
     }
 
-    @And("admin click on Sign In submit button1")
+    @And("admin click on Sign In submit button")
     public void clickOnSignInSubmitButton() {
         us_01HomePage.signInSubmitButton.click();
     }
@@ -147,21 +145,21 @@ public class US_01RegisterStepDefs {
 
     }
 
-
-    @And("admin clicks usermanagement option1")
+    @And("admin clicks usermanagement option")
     public void userClicksUsermanagementOption() {
         JSUtils.clickElementByJS(us_01HomePage.userManagementOption);
 
     }
 
-    @And("admin clicks ID sign1")
+    @And("admin clicks ID sign")
     public void userClicksIDSign() {
 
         JSUtils.clickElementByJS(us_01UserManagementPage.idIcon);
 
+       userEmail=us_01UserManagementPage.email.getText();
+       System.out.println(userEmail);
 
     }
-
 
     @Then("verify that fourth character  of SSN should be dash")
     public void verifyThatFourthCharacterOfSSNShouldBeDash() {
@@ -207,26 +205,15 @@ public class US_01RegisterStepDefs {
        public void verifyThatLastnameShouldNotBeBlank() {
         JSUtils.clickElementByJS(us_01UserManagementPage.editButton);
 
-        JSUtils.clickElementByJS(us_01UserManagementPage.activationCheckbox);
-
+       JSUtils.clickElementByJS(us_01UserManagementPage.activationCheckbox);
+       ReusableMethods.waitFor(3);
         WebElement dropdown= us_01UserManagementPage.selectOptions;
-
+        ReusableMethods.waitFor(3);
         Select select = new Select(dropdown);
         select.selectByIndex(4);
 
-
        JSUtils.clickElementByJS(us_01UserManagementPage.editSaveButton);
-
-
-
-
 
 }
 
-
-    @Then("close the application{int}")
-    public void closeTheApplication(int arg0) {
-        Driver.closeDriver();
-
-    }
 }

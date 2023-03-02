@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US_01HomePage {
+public class US_0102HomePage {
 
 
-    public US_01HomePage() {
+    public US_0102HomePage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
