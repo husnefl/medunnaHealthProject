@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US_01UserManagementPage {
+public class US_0102UserManagementPage {
 
-    public US_01UserManagementPage() {
+    public US_0102UserManagementPage() {
 
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -25,7 +25,7 @@ public class US_01UserManagementPage {
     @FindBy(xpath = "//tbody//tr[1]//td[11]/div/a[2]/span/span")
     public WebElement editButton;
 
-    @FindBy(id = "activated")
+    @FindBy(xpath = "//*[@id='activated']")
     public WebElement activationCheckbox;
 
     @FindBy(id = "authorities")
@@ -44,6 +44,23 @@ public class US_01UserManagementPage {
 
     @FindBy(id = "firstName")
     public WebElement editLastName;
+
+// US_02====================================================================================================================
+@FindBy(xpath = "//table//tr[1]//td[2]")
+public WebElement loginUserName;
+
+    @FindBy(xpath = "//table//tr[1]//td[4]")
+    public WebElement email;
+
+    @FindBy(xpath = "//table//tr[1]//td[3]")
+    public WebElement ssnFromTable;
+
+    @FindBy(xpath = "//table//tr[1]//td[4]")
+    public WebElement emailFromTable;
+
+
+
+
 
 
 
