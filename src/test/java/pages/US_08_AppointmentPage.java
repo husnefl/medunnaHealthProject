@@ -11,61 +11,74 @@ public class US_08_AppointmentPage {
     }
 
     @FindBy(id = "account-menu")
-    public WebElement userIcon08;
+    public WebElement userIconha;
 
     @FindBy(id = "login-item")
-    public WebElement signInOption08;
+    public WebElement signInOptionha;
 
 
     @FindBy(id = "username")
-    public WebElement usernameInput08;
+    public WebElement usernameInputha;
 
     @FindBy(id = "password")
-    public WebElement passwordInput08;
+    public WebElement passwordInputha;
 
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement signInSubmitButton08;
+    public WebElement signInSubmitButtonha;
 
     @FindBy(xpath = "//span[.='MY PAGES(PATIENT)']")
-    public WebElement myPages;
+    public WebElement myPagesha;
 
     @FindBy(xpath = "//span[.='Make an Appointment']")
-    public WebElement makeAnAppointment;
+    public WebElement makeAnAppointmentha;
 
 
     @FindBy(xpath = "//input[@name='phone']")
-    public WebElement phoneNumber;
+    public WebElement phoneNumberha;
 
     @FindBy(xpath = "//input[@name='appoDate']")
-    public WebElement appointmentDate;
+    public WebElement appointmentDateha;
 
     @FindBy(xpath = "//span[.='Send an Appointment Request']")
-    public WebElement requestButton;
+    public WebElement requestButtonha;
 
 
     @FindBy(xpath = "//*[text()='Appointment registration saved!']")
-    public WebElement requestButtonMessage;
+    public WebElement requestButtonMessageha;
 
 
     @FindBy(xpath = "//input[@value='2023-03-26']")
-    public WebElement aValidDate;
-
+    public WebElement aValidDateha;
 
 
     @FindBy(xpath = "//span[.='Appointment date can not be past date!']")
     public WebElement invalidDateMessage;
 
     @FindBy(xpath = "//input[@name='appoDate']")
-    public WebElement appointmentDateButton;
+    public WebElement appointmentDateButtonha;
 
     @FindBy(xpath = "//span[.='Sign out']")
-    public WebElement signOut;
+    public WebElement signOutha;
 
     @FindBy(xpath = "//span[.='Bilge Bella Pery']")
-    public WebElement registeredNameIcon;
+    public WebElement registeredNameIconha;
+
+    @FindBy(xpath = " //span[.='My Appointments']")
+    public WebElement myAppointmentsDropDown;
+
+    @FindBy(xpath = " //input[@name='fromDate']")
+    public WebElement fromDateBox;
+
+    @FindBy(xpath = " //input[@name='toDate']")
+    public WebElement toDateBox;
+
+    @FindBy(xpath = "//table//tr//td[1]")
+    public WebElement verifyAppointmentId;
 
 
-
+    @FindBy(xpath = "//span[text()='MY PAGES']")
+    public WebElement myPagesMenuha;
 
 
 }
+
