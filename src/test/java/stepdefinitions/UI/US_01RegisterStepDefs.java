@@ -21,23 +21,26 @@ public class US_01RegisterStepDefs {
     US_01HomePage us_01HomePage = new US_01HomePage();
     US_01UserManagementPage us_01UserManagementPage = new US_01UserManagementPage();
 
-    @Given("user goes to medunna homePage")
-    public void user_goes_to_medunna_home_page() {
+
+
+    @Given("user goes to medunna homePage1")
+    public void user_goes_to_medunna_home_page1() {
 
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
 
     }
-
-    @When("user clicks user icon")
-    public void user_clicks_user_icon() {
+    @When("user clicks user icon1")
+    public void user_clicks_user_icon1() {
         us_01HomePage.userIcon.click();
+
     }
-
-    @And("user clicks Register option")
-    public void user_clicks_register_option() {
-
+    @When("user clicks Register option1")
+    public void user_clicks_register_option1() {
         us_01HomePage.registerOption.click();
     }
+
+
+
 
     @When("user enters the SSN number {string}")
     public void user_enters_the_ssn_number(String SSN) {
@@ -101,19 +104,19 @@ public class US_01RegisterStepDefs {
     }
 
 
-    @When("user clicks the register button")
+    @When("user clicks the register button1")
     public void user_clicks_the_register_button() {
 
         us_01HomePage.registerButton.click();
     }
 
 
-    @When("admin clicks on user icon")
+    @When("admin clicks on user icon1")
     public void adminClicksOnUserIcon() {
 
         us_01HomePage.userIcon.click();
     }
-    @When("admin clicks Sign in option")
+    @When("admin clicks Sign in option1")
     public void user_clicks_sign_in_option() {
 
         us_01HomePage.signInOption.click();
@@ -130,13 +133,13 @@ public class US_01RegisterStepDefs {
     }
 
 
-    @And("admin on Remember Me checkbox")
+    @And("admin on Remember Me checkbox1")
     public void clickOnRememberMeCheckbox() {
 
         us_01HomePage.rememberMeCheckbox.click();
     }
 
-    @And("admin click on Sign In submit button")
+    @And("admin click on Sign In submit button1")
     public void clickOnSignInSubmitButton() {
         us_01HomePage.signInSubmitButton.click();
     }
@@ -148,13 +151,13 @@ public class US_01RegisterStepDefs {
     }
 
 
-    @And("admin clicks usermanagement option")
+    @And("admin clicks usermanagement option1")
     public void userClicksUsermanagementOption() {
         JSUtils.clickElementByJS(us_01HomePage.userManagementOption);
 
     }
 
-    @And("admin clicks ID sign")
+    @And("admin clicks ID sign1")
     public void userClicksIDSign() {
 
         JSUtils.clickElementByJS(us_01UserManagementPage.idIcon);
@@ -224,8 +227,5 @@ public class US_01RegisterStepDefs {
 }
 
 
-    @And("capture the screenshot")
-    public void captureTheScreenshot() throws IOException {
-        ReusableMethods.getScreenshot("screenshot");
-    }
+
 }

@@ -15,12 +15,24 @@ import utilities.ReusableMethods;
 public class US_05_StepDefinition {
     US_05_HomePage us_05_homePage = new US_05_HomePage();
     US_05_LoginPage us_05_loginPage=new US_05_LoginPage();
+
     @Given("user navigate to {string} pageYA")
     public void user_navigate_to_pageYA(String string) {
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
     }
     @When("user click on user icon optionYA")
     public void user_click_on_user_icon_optionYA() {
+
+
+    @Given("user navigate to {string} page5")
+    public void user_navigate_to_page(String string) {
+
+        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
+    }
+
+    @When("user click on user icon option5")
+    public void user_click_on_user_icon_option() {
+
         ReusableMethods.waitFor(3);
         us_05_homePage.userIcon.click();
     }
@@ -28,8 +40,14 @@ public class US_05_StepDefinition {
     public void user_click_on_sign_in_optionYA() {
         us_05_homePage.signInOption.click();
     }
+
     @When("user enter valid usernameYA")
     public void user_enter_valid_usernameYA() {
+
+
+    @When("user enter valid username5")
+    public void user_enter_valid_username() {
+
        ReusableMethods.waitFor(2);
        us_05_loginPage.userNameInput.sendKeys(ConfigReader.getProperty("patientUsername5"));
     }
