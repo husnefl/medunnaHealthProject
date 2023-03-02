@@ -20,5 +20,5 @@ import org.junit.runner.RunWith;
         dryRun = false,
           tags = "@UI_Dr_Appt"
 )
-public class Runner {git
+public class Runner {
 }
