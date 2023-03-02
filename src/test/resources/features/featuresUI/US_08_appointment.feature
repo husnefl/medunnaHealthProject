@@ -23,7 +23,8 @@ Background:Login08
     And choose a valid date in proper formatHA
     And Click Send an Appointment Request ButtonHA
     Then Verify the user should  be see the appointment  messageHA
-    Then Close Application07
+    Then close the applicationHA
+
 
 
 
