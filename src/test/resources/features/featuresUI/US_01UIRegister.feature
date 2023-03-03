@@ -1,13 +1,14 @@
-@medunna_register @smoke
+@medunna_register
 
 Feature:SSN_Validation
 
-  Background: user_goes_to_medunna_page
-    Given user goes to medunna homePage
+#  Background: user_goes_to_medunna_page
+#    Given user goes to medunna homePage
 
 
   @medunna_register_validation_ssn
   Scenario Outline: TC01_Register
+    Given user goes to medunna homePage
     When user clicks user icon
     And user clicks Register option
     And user enters the SSN number "<SSN_number>"
@@ -20,11 +21,11 @@ Feature:SSN_Validation
     And user clicks the register button
 
     Examples: register_ssn
-      | SSN_number  | first_name | last_name | user_name       | user_email          | user_password | user_confirm_password |
-      | 462-17-4563 | aaaTom     | aaaCruise | aaaDoctorCruise | aaacruise@gmail.com | aaaTom20      | aaaTom20              |
+      | SSN_number  | first_name | last_name | user_name        | user_email        | user_password | user_confirm_password |
+      | 458-59-4539 | Tomyy     | Cruiseyy   | DoctorCruiseyy | cruiseyy@gmail.com | Tom20yy        | Tom20yy                |
 
 
-    Scenario Outline: TC01_Validation_SSN_Number
+  Scenario Outline: TC01_Validation_SSN_Number
     When admin clicks on user icon
     And admin clicks Sign in option
     And admin enters user's name "<adminusername>" in field
@@ -45,9 +46,6 @@ Feature:SSN_Validation
   @medunna_Validation_SSN_Not_Blank
   Scenario Outline: TC02_Validation_SSN_Number
 
-    And admin clicks Administration section
-    And admin clicks usermanagement option
-    And admin clicks ID sign
     Then verify that SSN number should not be blank
 
     Examples: ssn_verify_data
@@ -72,7 +70,7 @@ Feature:SSN_Validation
 
     Then verify that lastname should not be blank
 
-    Then close the application1
+    Then close the applicationmb
 
     Examples: ssn_verify_data
       | adminusername | adminpassword |
