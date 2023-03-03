@@ -13,35 +13,35 @@ import static utilities.AuthenticationMedunna.generateToken;
 
 public class US_10ApiStepDefs {
 
-   US_10APIpojo expectedData;
-   US_10APIpojo actualData;
-    Response response;
-   String url;
+ US_10APIpojo expectedData;
+ US_10APIpojo actualData;
+ Response response;
+ String url;
 
 
-    @Given("user set the urlulf {string}")
-    public void user_set_the_urlulf(String URL) {
+ @Given("user set the urlulf {string}")
+ public void user_set_the_urlulf(String URL) {
 
-     url=URL;
-    }
+  url=URL;
+ }
 
-    @And("Call the Pojo to create expected dataulf")
-    public void callThePojoToCreateExpectedData() {
-     expectedData= new US_10APIpojo("sabiradil","Sabir","Adil","301-20-3030","sabiradil@gmail.com");
-     System.out.println(expectedData);
-    }
+ @And("Call the Pojo to create expected dataulf")
+ public void callThePojoToCreateExpectedData() {
+  expectedData= new US_10APIpojo("sabiradil","Sabir","Adil","301-20-3030","sabiradil@gmail.com");
+  System.out.println(expectedData);
+ }
 
-    @Given("sends a get-request to get all registrant dataulf")
-    public void sends_a_get_request_to_get_all_registrant_data() {
-     response=given().headers("Authorization","Bearer " + generateToken(),"Content-Type", ContentType.JSON,"Accept", ContentType.JSON).when().get(url);
-     response.prettyPrint();
-    }
+ @Given("sends a get-request to get all registrant dataulf")
+ public void sends_a_get_request_to_get_all_registrant_data() {
+  response=given().headers("Authorization","Bearer " + generateToken(),"Content-Type", ContentType.JSON,"Accept", ContentType.JSON).when().get(url);
+  response.prettyPrint();
+ }
 
-// @Then("HTTP StatusCode should be {int}")
-// public void http_status_code_should_be(Integer status) {
-// assertEquals(200,response.statusCode());
+ @Then("HTTP Status Code shouldulf be {int}")
+ public void http_status_code_shouldulf_be(Integer int1) {
+ assertEquals(200,response.statusCode());
 
- //}
+ }
  @Then("Verify response content type isulf {string}")
  public void verify_response_content_type_is(String string) {
   assertEquals(string,response.contentType());
