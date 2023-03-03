@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
         },
         monochrome=true,
-        features = "./src/test/resources/features/featuresDB",
+        features = "./src/test/resources/features/",
         glue = {"stepdefinitions","hooks"},
         dryRun = false,
         tags = "@db_read"
