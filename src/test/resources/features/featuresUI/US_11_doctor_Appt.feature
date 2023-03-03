@@ -1,4 +1,4 @@
-@UI_Dr_Appt
+@UI_Dr_Appt @smoke
 Feature: Ui_Feature
 
   Background:Login
