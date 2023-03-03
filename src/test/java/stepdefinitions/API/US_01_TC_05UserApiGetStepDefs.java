@@ -73,6 +73,12 @@ public class US_01_TC_05UserApiGetStepDefs {
             assertEquals(expectedData.getEmail(),actualData.getEmail());
 
         }
+<<<<<<< HEAD
+=======
+        @Then("close the applicationmb")
+        public void closeTheApplicationmb() {
+            Driver.closeDriver();
+>>>>>>> 13069ee32ed1b28d4559dbb944287b0831c9a5ca
 
 
 

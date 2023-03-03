@@ -67,6 +67,7 @@ public class US_05_StepDefinition {
     public void closeTheApplicationYA() {
         Driver.closeDriver();
     }
+
     @When("user enter invalid usernameYA")
     public void userEnterInvalidUsernameYA() {
         ReusableMethods.waitFor(1);
