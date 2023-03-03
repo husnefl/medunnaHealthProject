@@ -11,7 +11,7 @@ public class US_10StepDefs {
 
     @Given("user go to {string}")
     public void user_go_to(String string) {
-        Driver.getDriver().get(ConfigReader.getProperty("medunna_login_url"));
+        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
 
     }
     @Then("user clicks MY PAGE dropdown")
