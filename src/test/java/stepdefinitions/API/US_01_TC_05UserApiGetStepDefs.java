@@ -71,7 +71,7 @@ public class US_01_TC_05UserApiGetStepDefs {
 
         }
         @Then("close the applicationmb")
-        public void closeTheApplication() {
+        public void closeTheApplicationmb() {
             Driver.closeDriver();
 
         }

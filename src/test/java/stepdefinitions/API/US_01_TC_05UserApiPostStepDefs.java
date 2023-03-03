@@ -19,8 +19,6 @@ public class US_01_TC_05UserApiPostStepDefs {
     Response response;
     US_01MedunnaUsersPojo expectedData;
 
-
-
     Faker faker = new Faker();
    String url;
 
@@ -57,9 +55,6 @@ public class US_01_TC_05UserApiPostStepDefs {
     public void verify_expected_values_and_actual_values() {
 
         US_01MedunnaUsersPojo actualData = response.as(US_01MedunnaUsersPojo.class);
-
-           actualData = response.as(US_01MedunnaUsersPojo.class);
-
         System.out.println("actualData  =  " + actualData);
 
         assertEquals(expectedData.getLogin(),actualData.getLogin());
@@ -70,3 +65,4 @@ public class US_01_TC_05UserApiPostStepDefs {
     }
 
 }
+
