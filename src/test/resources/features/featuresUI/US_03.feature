@@ -1,4 +1,4 @@
-@US03
+@US03 @smoke
 Feature:Registration page should restrict password usage to a secure
   and high level passcode
 

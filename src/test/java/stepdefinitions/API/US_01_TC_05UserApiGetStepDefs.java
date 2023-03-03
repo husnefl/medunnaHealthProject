@@ -70,7 +70,7 @@ public class US_01_TC_05UserApiGetStepDefs {
             assertEquals(expectedData.getEmail(),actualData.getEmail());
 
         }
-        @Then("close the application1")
+        @Then("close the applicationmb")
         public void closeTheApplication() {
             Driver.closeDriver();
 
