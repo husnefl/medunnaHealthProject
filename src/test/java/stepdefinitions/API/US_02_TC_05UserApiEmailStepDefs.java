@@ -22,8 +22,10 @@ public class US_02_TC_05UserApiEmailStepDefs {
     String emailUser;
     @Given("user sets the url {string}")
     public void userSetsTheUrl(String URL) {
+
         url=URL;
     }
+
     @And("sends a get request to get all registrant data")
     public void sendsAGetRequestToGetAllRegistrantData() {
         response = given().headers("Authorization","Bearer " + generateToken(),"Content-Type", ContentType.JSON,"Accept", ContentType.JSON).
