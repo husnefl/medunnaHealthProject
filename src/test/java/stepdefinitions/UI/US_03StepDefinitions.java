@@ -15,16 +15,16 @@ public class US_03StepDefinitions {
 
  US_03MedunnaHomePage us_03MedunnaHomePage = new US_03MedunnaHomePage();
 
-    @Given("user goes to medunna url")
+    @Given("user goes to medunna url3")
     public void user_goes_to_medunna_url() {
 
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
     }
-    @When("clicks on account icon")
+    @When("clicks on account icon3")
     public void clicks_on_account_icon() {
        us_03MedunnaHomePage.accountIcon.click();
     }
-    @When("clicks on register button")
+    @When("clicks on register button3")
     public void clicks_on_register_button() {
       us_03MedunnaHomePage.registerLink.click();
     }
@@ -54,7 +54,7 @@ public class US_03StepDefinitions {
             Assert.assertEquals(barNumber,(Integer)(us_03MedunnaHomePage.bar5.size()));
         }
     }
-    @And("close the application")
+    @And("close the application3")
    public void closeTheApplication() {
         Driver.closeDriver();
         ReusableMethods.waitFor(3);
