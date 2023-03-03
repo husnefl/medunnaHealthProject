@@ -19,12 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},
         dryRun = false,
 
-          tags = "@US_10API"
-
- 
-        tags = "@UI_Dr_Appt"
- 
-          
+          tags = "@US_10API"          
 )
 public class Runner {
 }
