@@ -7,19 +7,21 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import pages.US_01HomePage;
-import pages.US_01UserManagementPage;
+import pages.US_0102HomePage;
+import pages.US_0102UserManagementPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.JSUtils;
 import utilities.ReusableMethods;
 
-import java.io.IOException;
-
 public class US_01RegisterStepDefs {
 
-    US_01HomePage us_01HomePage = new US_01HomePage();
-    US_01UserManagementPage us_01UserManagementPage = new US_01UserManagementPage();
+
+
+    US_0102HomePage us_01HomePage = new US_0102HomePage();
+    US_0102UserManagementPage us_01UserManagementPage = new US_0102UserManagementPage();
+
+   static String userEmail;
 
     @Given("user goes to medunna homePage")
     public void user_goes_to_medunna_home_page() {
@@ -51,11 +53,9 @@ public class US_01RegisterStepDefs {
             us_01HomePage.invalidSSNText.isDisplayed();
             System.out.println(us_01HomePage.ssnNumber.getText().length());
 
-
         }
 
     }
-
     @When("user enters the first name {string}")
     public void user_enters_the_first_name(String firstname) {
 
@@ -68,7 +68,6 @@ public class US_01RegisterStepDefs {
             us_01HomePage.invalidFirstNameText.isDisplayed();
 
         }
-
 
     }
 
@@ -106,7 +105,6 @@ public class US_01RegisterStepDefs {
 
         us_01HomePage.registerButton.click();
     }
-
 
     @When("admin clicks on user icon")
     public void adminClicksOnUserIcon() {
@@ -147,7 +145,6 @@ public class US_01RegisterStepDefs {
 
     }
 
-
     @And("admin clicks usermanagement option")
     public void userClicksUsermanagementOption() {
         JSUtils.clickElementByJS(us_01HomePage.userManagementOption);
@@ -159,9 +156,10 @@ public class US_01RegisterStepDefs {
 
         JSUtils.clickElementByJS(us_01UserManagementPage.idIcon);
 
+       userEmail=us_01UserManagementPage.email.getText();
+       System.out.println(userEmail);
 
     }
-
 
     @Then("verify that fourth character  of SSN should be dash")
     public void verifyThatFourthCharacterOfSSNShouldBeDash() {
@@ -207,25 +205,15 @@ public class US_01RegisterStepDefs {
        public void verifyThatLastnameShouldNotBeBlank() {
         JSUtils.clickElementByJS(us_01UserManagementPage.editButton);
 
-        JSUtils.clickElementByJS(us_01UserManagementPage.activationCheckbox);
-
+       JSUtils.clickElementByJS(us_01UserManagementPage.activationCheckbox);
+       ReusableMethods.waitFor(3);
         WebElement dropdown= us_01UserManagementPage.selectOptions;
-
+        ReusableMethods.waitFor(3);
         Select select = new Select(dropdown);
         select.selectByIndex(4);
 
-
        JSUtils.clickElementByJS(us_01UserManagementPage.editSaveButton);
-
-
-
-
 
 }
 
-
-    @And("capture the screenshot")
-    public void captureTheScreenshot() throws IOException {
-        ReusableMethods.getScreenshot("screenshot");
-    }
 }

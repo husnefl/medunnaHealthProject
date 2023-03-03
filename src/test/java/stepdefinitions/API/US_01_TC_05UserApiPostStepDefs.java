@@ -7,7 +7,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import pojos.MedunnaUsersPojo;
+import pojos.US_01MedunnaUsersPojo;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
@@ -15,28 +15,31 @@ import static utilities.AuthenticationMedunna.generateToken;
 
 public class US_01_TC_05UserApiPostStepDefs {
 
+<<<<<<< HEAD
     Response response;
+    US_01MedunnaUsersPojo expectedData;
+=======
+   Response response;
     MedunnaUsersPojo expectedData;
+>>>>>>> 9ed12f9e61214ad0cad566a348c1981ae84e35db
 
     Faker faker = new Faker();
-    String url;
+   String url;
 
     RequestSpecification spec;
 
 
-
-
         @Given("user set the url for post request")
-        public void user_set_the_url_for_post_request () {
+           public void user_set_the_url_for_post_request () {
             spec = new RequestSpecBuilder().setBaseUri("https://medunna.com").build();
             spec.pathParams("first", "api", "second", "register");
 
 
         }
         @Given("Call the Pojo to create new expected data")
-        public void call_the_pojo_to_create_new_expected_data () {
+       public void call_the_pojo_to_create_new_expected_data () {
 
-            expectedData = new MedunnaUsersPojo(faker.name().username(), faker.name().firstName(),
+            expectedData = new US_01MedunnaUsersPojo(faker.name().username(), faker.name().firstName(),
                     faker.name().lastName(), faker.idNumber().ssnValid(), faker.internet().emailAddress(), faker.internet().password());
 
             System.out.println("expectedData  :" + expectedData);
@@ -54,7 +57,11 @@ public class US_01_TC_05UserApiPostStepDefs {
         }
     @Then("Verify expected values and actual values")
     public void verify_expected_values_and_actual_values() {
-        MedunnaUsersPojo actualData = response.as(MedunnaUsersPojo.class);
+<<<<<<< HEAD
+        US_01MedunnaUsersPojo actualData = response.as(US_01MedunnaUsersPojo.class);
+=======
+       MedunnaUsersPojo actualData = response.as(MedunnaUsersPojo.class);
+>>>>>>> 9ed12f9e61214ad0cad566a348c1981ae84e35db
         System.out.println("actualData  =  " + actualData);
 
         assertEquals(expectedData.getLogin(),actualData.getLogin());
@@ -64,8 +71,4 @@ public class US_01_TC_05UserApiPostStepDefs {
         assertEquals(expectedData.getEmail(),actualData.getEmail());
     }
 
-
-
 }
-
-
