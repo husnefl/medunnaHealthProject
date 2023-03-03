@@ -23,7 +23,7 @@ Feature: db_customer_testing
     And get the user email from first row
 
     Then verify  userEmail should be in jhi_user list
-    Then close the application1
+    Then close the applicationmb
     Examples: ssn_verify_data
       | adminusername | adminpassword |
       | AdminTeam01  | Team01+       |
