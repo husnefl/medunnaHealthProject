@@ -1,5 +1,5 @@
 
-@US_15
+@US_15 @smoke
 
 Feature: Doctor should be able to edit patient info  - View / Edit Impatients by Physician (Doctor)
 
