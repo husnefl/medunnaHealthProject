@@ -54,7 +54,7 @@ public class US_03StepDefinitions {
             Assert.assertEquals(barNumber,(Integer)(us_03MedunnaHomePage.bar5.size()));
         }
     }
-    @And("close the application3")
+    @And("close the applicationfu")
    public void closeTheApplication() {
         Driver.closeDriver();
         ReusableMethods.waitFor(3);

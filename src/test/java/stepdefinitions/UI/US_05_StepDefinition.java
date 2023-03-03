@@ -65,6 +65,7 @@ public class US_05_StepDefinition {
 
     @Then("close the application")
     public void closeTheApplication() {
+
         Driver.closeDriver();
     }
     @When("user enter invalid username")
