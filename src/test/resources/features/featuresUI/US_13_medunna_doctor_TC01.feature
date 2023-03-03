@@ -18,5 +18,3 @@ Feature: US_13_medunna_doctor_TC01
     And click on "Insulin" check mark
     And click on save button
     Then   verify user see success popup message
-
-

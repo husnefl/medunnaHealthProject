@@ -25,7 +25,7 @@ Feature:SSN_Validation
       | 458-59-4539 | Tomyy     | Cruiseyy   | DoctorCruiseyy | cruiseyy@gmail.com | Tom20yy        | Tom20yy                |
 
 
-    Scenario Outline: TC01_Validation_SSN_Number
+  Scenario Outline: TC01_Validation_SSN_Number
     When admin clicks on user icon
     And admin clicks Sign in option
     And admin enters user's name "<adminusername>" in field

@@ -1,4 +1,4 @@
-  @medunna_UserName_Email
+@medunna_UserName_Email
 
 Feature:UsernameEmail_Validation
 
@@ -47,14 +47,12 @@ Feature:UsernameEmail_Validation
 
   @medunna_email_has_@_and_"."
   Scenario: TC03_Validation_email_@ and "."
-  Then verify that email has @ and .
+    Then verify that email has @ and .
 
   @medunna_email_not_blank
   Scenario: TC04_Validation_not_blank
     Then verify that email is not blank
     Then verify email length should be greater zero
-    Then close the application1
-
-
+    Then close the applicationmb
 
 
