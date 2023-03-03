@@ -24,7 +24,7 @@ Feature:SSN_Validation
       | 462-17-4563 | aaaTom     | aaaCruise | aaaDoctorCruise | aaacruise@gmail.com | aaaTom20      | aaaTom20              |
 
 
-    Scenario Outline: TC01_Validation_SSN_Number
+  Scenario Outline: TC01_Validation_SSN_Number
     When admin clicks on user icon
     And admin clicks Sign in option
     And admin enters user's name "<adminusername>" in field
