@@ -14,6 +14,7 @@ Feature: passwordSegment feature
     And user provides the currentPassword as "<currentPassword>"
     And user provides the newPassword as "<newPassword>"
     And user provides the newPasswordConfirmation as "<newPasswordConfirmation>"
+
     Then user verifies password changed successfully
     Examples: user info
       |userName        |passWord |  currentPassword |newPassword|newPasswordConfirmation|

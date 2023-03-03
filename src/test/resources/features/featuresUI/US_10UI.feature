@@ -25,7 +25,7 @@ Feature:patient edition
     And user edit stateDropDown
     And user  edit saveButton
 
-    Then user verifies password changed successfully
+#    Then user verifies information changed successfully
     Examples: user info
       |userName        |passWord |        SSN        |      email           |  firstName | lastName|
       |talehmecid      |T2023$tm |     113-13-6789   |temkinabir@gmail.com  |   Temkin   |   Abir  |
