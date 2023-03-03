@@ -15,13 +15,11 @@ import static utilities.AuthenticationMedunna.generateToken;
 
 public class US_01_TC_05UserApiPostStepDefs {
 
-<<<<<<< HEAD
+
     Response response;
     US_01MedunnaUsersPojo expectedData;
-=======
-   Response response;
-    MedunnaUsersPojo expectedData;
->>>>>>> 9ed12f9e61214ad0cad566a348c1981ae84e35db
+
+
 
     Faker faker = new Faker();
    String url;
@@ -57,11 +55,10 @@ public class US_01_TC_05UserApiPostStepDefs {
         }
     @Then("Verify expected values and actual values")
     public void verify_expected_values_and_actual_values() {
-<<<<<<< HEAD
+
         US_01MedunnaUsersPojo actualData = response.as(US_01MedunnaUsersPojo.class);
-=======
-       MedunnaUsersPojo actualData = response.as(MedunnaUsersPojo.class);
->>>>>>> 9ed12f9e61214ad0cad566a348c1981ae84e35db
+        
+
         System.out.println("actualData  =  " + actualData);
 
         assertEquals(expectedData.getLogin(),actualData.getLogin());
