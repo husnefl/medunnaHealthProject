@@ -64,4 +64,9 @@ public class US_01_TC_05UserApiPostStepDefs {
         assertEquals(expectedData.getEmail(),actualData.getEmail());
     }
 
+ 
 }
+ 
+ 
+ 
+ 
