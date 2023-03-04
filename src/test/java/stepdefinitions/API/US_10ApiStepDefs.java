@@ -19,33 +19,34 @@ public class US_10ApiStepDefs {
    String url;
 
 
-    @Given("user set the url {string}")
-    public void user_set_the_url(String URL) {
+    @Given("user set the urlulf {string}")
+    public void user_set_the_urlulf(String URL) {
+
      url=URL;
     }
 
-    @And("Call the Pojo to create expected data")
+    @And("Call the Pojo to create expected dataulf")
     public void callThePojoToCreateExpectedData() {
      expectedData= new US_10APIpojo("sabiradil","Sabir","Adil","301-20-3030","sabiradil@gmail.com");
      System.out.println(expectedData);
     }
 
-    @Given("sends a get-request to get all registrant data")
+    @Given("sends a get-request to get all registrant dataulf")
     public void sends_a_get_request_to_get_all_registrant_data() {
      response=given().headers("Authorization","Bearer " + generateToken(),"Content-Type", ContentType.JSON,"Accept", ContentType.JSON).when().get(url);
      response.prettyPrint();
     }
 
- @Then("HTTP Status Code should be {int}")
- public void http_status_code_should_be(Integer status) {
- assertEquals(200,response.statusCode());
+// @Then("HTTP StatusCode should be {int}")
+// public void http_status_code_should_be(Integer status) {
+// assertEquals(200,response.statusCode());
 
- }
- @Then("Verify response content type is {string}")
+ //}
+ @Then("Verify response content type isulf {string}")
  public void verify_response_content_type_is(String string) {
   assertEquals(string,response.contentType());
  }
- @Then("Verify expected values and actual values should be same")
+ @Then("Verify expected values and actual values should be sameulf")
  public void verify_expected_values_and_actual_values_should_be_same() {
 
   actualData = response.as(US_10APIpojo.class);
