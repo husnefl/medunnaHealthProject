@@ -5,16 +5,16 @@ package stepdefinitions.UI;
 
 
 
-        import io.cucumber.java.en.*;
-        import org.junit.Assert;
-        import org.openqa.selenium.WebElement;
-        import pages.US_12_13_page;
-        import utilities.Driver;
-        import utilities.JSUtils;
-        import utilities.ReusableMethods;
+import io.cucumber.java.en.*;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import pages.US_12_13_page;
+import utilities.Driver;
+import utilities.JSUtils;
+import utilities.ReusableMethods;
 
-        import java.util.ArrayList;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 public class US_12_13_stepdef {
 
@@ -258,7 +258,7 @@ public class US_12_13_stepdef {
     }
 
 
-    @And("click on {string} check mark13")
+    @And("click on {string} check mark12")
     public void clickOnCheckMark(String arg0) {
         ReusableMethods.waitFor(1);
         JSUtils.clickElementByJS(us_12_13_page.insulinCheckBox);
@@ -266,24 +266,17 @@ public class US_12_13_stepdef {
 
     }
 
-    @Then("verify user see success popup message13")
+    @Then("verify user see success popup message12")
     public void verifyUserSeeSuccessPopupMessage() {
         ReusableMethods.waitFor(1);
         ReusableMethods.verifyElementDisplayed(us_12_13_page.testCreatedSuccessMessage);
 
     }
 
-    @Then("verify {string} {string} {string} {string} {string} {string}  {string} has checkmark options13")
+    @Then("verify {string} {string} {string} {string} {string} {string}  {string} has checkmark options12")
     public void verifyHasCheckmarkOptions(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6) {
         List<WebElement> checkboxlist=us_12_13_page.checkBoxes;
         System.out.println(checkboxlist.size());
-
-        for(int i=1;i<12;i++){
-            if(checkboxlist.get(i).isEnabled()){
-            Assert.assertTrue(true);
-            }else{
-                System.out.println("the number of :"+i+" is not clickable");
-            }
 
 
 
@@ -300,6 +293,4 @@ public class US_12_13_stepdef {
 
 
 
-}}
-
-
+}

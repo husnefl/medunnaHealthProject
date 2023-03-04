@@ -1,4 +1,4 @@
-@US04
+@US04 @smoke
 Feature: An admin must activate the registered user otherwise user should not be able to login.
 
   Background:
@@ -21,7 +21,7 @@ Feature: An admin must activate the registered user otherwise user should not be
      Then verify user updated message is displayed
     And click on adminTeam03
     And click on sign out
-    And close the application3
+    And close the applicationfu
 
   Scenario: TC_02 Admin user should activate the registered staff
     And click on deactivated registered "staff" edit button
@@ -31,7 +31,7 @@ Feature: An admin must activate the registered user otherwise user should not be
     Then verify user updated message is displayed
     And click on adminTeam03
     And click on sign out
-    And close the application3
+    And close the applicationfu
 
   Scenario: TC_03 Admin user should activate the registered doctor
      And click on deactivated registered "doctor" edit button
@@ -41,7 +41,7 @@ Feature: An admin must activate the registered user otherwise user should not be
      Then verify user updated message is displayed
     And click on adminTeam03
     And click on sign out
-     And close the application3
+     And close the applicationfu
 
   Scenario: TC_04 Admin user should activate the registered user
     And click on deactivated registered "user" edit button
@@ -51,4 +51,4 @@ Feature: An admin must activate the registered user otherwise user should not be
     Then verify user updated message is displayed
     And click on adminTeam03
     And click on sign out
-    And close the application3
+    And close the applicationfu

@@ -164,7 +164,8 @@ public class US_14_UI_SignInStepDefs {
     public void click_save_button_confirm_changes() throws IOException {
         ReusableMethods.waitFor(2);
         us14MyInpatient.SaveInpatient.submit();
-        ReusableMethods.getScreenshot("https://www.medunna.com/in-patient/2052/edit");
+        ReusableMethods.getScreenshot("ahmet345");
+
     }
 
     @Then("take a screenshot of notification after clicking save_US14")
