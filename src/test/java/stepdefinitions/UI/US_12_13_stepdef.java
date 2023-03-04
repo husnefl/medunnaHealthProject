@@ -5,16 +5,16 @@ package stepdefinitions.UI;
 
 
 
-        import io.cucumber.java.en.*;
-        import org.junit.Assert;
-        import org.openqa.selenium.WebElement;
-        import pages.US_12_13_page;
-        import utilities.Driver;
-        import utilities.JSUtils;
-        import utilities.ReusableMethods;
+import io.cucumber.java.en.*;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import pages.US_12_13_page;
+import utilities.Driver;
+import utilities.JSUtils;
+import utilities.ReusableMethods;
 
-        import java.util.ArrayList;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 public class US_12_13_stepdef {
 
@@ -294,5 +294,3 @@ public class US_12_13_stepdef {
 
 
 }
-
-
