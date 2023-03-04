@@ -1,37 +1,27 @@
 package pojos;
 
-
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 
-
-//import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
-
-public class MedunnaUsersPojo {
+public class US_10APIpojo {
 
     private String login;
     private String firstName;
     private String lastName;
     private String ssn;
     private String email;
-    private String password;
 
-
-
-    public MedunnaUsersPojo(String login, String firstName, String lastName, String ssn, String email, String password) {
+    public US_10APIpojo(String login, String firstName, String lastName, String ssn, String email) {
         this.login = login;
         this.firstName = firstName;
         this.lastName = lastName;
         this.ssn = ssn;
         this.email = email;
-        this.password = password;
     }
 
-    public MedunnaUsersPojo() {
+    public US_10APIpojo() {
     }
 
     public String getLogin() {
@@ -74,46 +64,36 @@ public class MedunnaUsersPojo {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     @Override
     public String toString() {
-        return "MedunnaUsersPojo{" +
+        return "US_10APIpojo{" +
                 "login='" + login + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", ssn='" + ssn + '\'' +
                 ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
 
     /*
-     {
-    "id": 5781,
-    "login": "doctorcruise",
-    "firstName": "Tom",
-    "lastName": "Cruise",
-    "ssn": "481-15-3553",
-    "email": "cruise@gmail.com",
-    "imageUrl": null,
-    "activated": false,
-    "langKey": null,
-    "createdBy": null,
-    "createdDate": null,
-    "lastModifiedBy": null,
-    "lastModifiedDate": null,
-    "authorities": null
-}
-
-   */
+    {
+        "id": 8503,
+            "login": "sabiradil",
+            "firstName": "Sabir",
+            "lastName": "Adil",
+            "ssn": "301-20-3030",
+            "email": "sabiradil@gmail.com",
 
 
+            "imageUrl": null,
+            "activated": false,
+            "langKey": null,
+            "createdBy": null,
+            "createdDate": null,
+            "lastModifiedBy": null,
+            "lastModifiedDate": null,
+            "authorities": null
+    }
+*/
 
 }

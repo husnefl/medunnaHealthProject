@@ -33,5 +33,13 @@ public class US_05_HomePage {
     @FindBy(xpath = "//a[@class='appointment-btn scrollto']")
     public WebElement makeAppointmentButton;
 
+    @FindBy(xpath = "//span[text()='MY PAGES']")
+    public WebElement myPagesOption;
+
+    @FindBy(xpath = "//span[text()='Search Patient']")
+    public WebElement searchPatientOption;
+
+
+
 
 }
