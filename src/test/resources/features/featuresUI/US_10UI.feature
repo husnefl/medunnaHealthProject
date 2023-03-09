@@ -1,4 +1,3 @@
-
 @UI_10_staff_edits
 Feature:patient edition
   Scenario Outline: staff should be able to edit patient
@@ -7,9 +6,9 @@ Feature:patient edition
     And user provides the userName as "<userName>"
     And user provides the passWord as "<passWord>"
     And user clicks on the signInButton
-    And user clicks MY PAGE
-    And user clicks SearchPatient button
-    And user provides patient in ssn box "<SSN>"
+    And user clicks MY PAGEUI
+    And user clicks SearchPatientUI button
+    And user provides patient in SSNUI box "<SSN>"
     And user clicks edit button
     And user edit "<firstName>"
     And user editss "<lastName>"
@@ -29,5 +28,3 @@ Feature:patient edition
     Examples: user info
       |userName        |passWord |        SSN        |      email           |  firstName | lastName|
       |talehmecid      |T2023$tm |     113-13-6789   |temkinabir@gmail.com  |   Temkin   |   Abir  |
-
-

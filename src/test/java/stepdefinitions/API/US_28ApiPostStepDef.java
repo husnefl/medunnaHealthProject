@@ -8,7 +8,6 @@ import pojos.US_28APIpojo;
 
 import static base_urls.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.assertEquals;
 import static utilities.AuthenticationMedunna.generateToken;
 
 public class US_28ApiPostStepDef {
@@ -18,8 +17,9 @@ public class US_28ApiPostStepDef {
     US_28APIpojo expectedData;
 
     //https://medunna.com/api/c-messages
-    @Given("user set the urlmedunna")
-    public void userSetTheUrlmedunna() {
+    @Given("user set the urlmedunna request")
+    public void userSetTheUrlmedunnaRequest() {
+
         spec.pathParams("first","api","second","c-messages");
     }
 
@@ -46,4 +46,6 @@ public class US_28ApiPostStepDef {
         assertEquals(expectedData.getMessage(),actualData.getMessage());
 
     }
+
+
 }
