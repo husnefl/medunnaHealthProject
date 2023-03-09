@@ -1,26 +1,26 @@
-
 package stepdefinitions.UI;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pages.US_10UIpage;
 
-public class US_10UIStepDef {
+public class US_10UIStepDefs {
 
     US_10UIpage page = new US_10UIpage();
 
-    @Then("user clicks MY PAGE")
-    public void userClicksMYPAGE() throws InterruptedException {
+    @And("user clicks MY PAGEUI")
+    public void userClicksMYPAGEUI() throws InterruptedException {
         page.MyPage.click();
         Thread.sleep(3000);
     }
-    @Then("user clicks SearchPatient button")
-    public void userClicksSearchPatientButton() throws InterruptedException {
+    @And("user clicks SearchPatientUI button")
+    public void userClicksSearchPatientUIButton() throws InterruptedException {
         page.SearchPatient.click();
         Thread.sleep(3000);
     }
-    @Then("user provides patient in ssn box {string}")
-    public void userProvidesPatientInSsnBox(String string) throws InterruptedException {
+    @And("user provides patient in SSNUI box {string}")
+    public void userProvidesPatientInSSNUIBox(String arg0) throws InterruptedException {
         page.patientSSNBox.sendKeys("113-13-6789");
-   Thread.sleep(3000);
+        Thread.sleep(3000);
     }
     @Then("user clicks edit button")
     public void userClicksEditButton() throws InterruptedException {
@@ -96,25 +96,7 @@ public class US_10UIStepDef {
         page.saveButton.click();
         Thread.sleep(3000);
     }
+
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
