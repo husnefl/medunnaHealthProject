@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions","hooks"},
         dryRun = false,
-          tags = "@smoke"
+          tags = "@UI_10_staff_edits"
 )
 public class Runner {
 }

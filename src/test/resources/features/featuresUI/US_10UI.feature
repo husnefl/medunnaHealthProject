@@ -1,5 +1,5 @@
-
 @UI_10_staff_edits
+
 Feature:patient edition
   Scenario Outline: staff should be able to edit patient
     Given user clicks the logIn dropdown
