@@ -44,7 +44,7 @@ public class US_02_TC_05UserApiEmailStepDefs {
 
     @Then("HTTP StatusCode should be {int}")
     public void http_status_code_should_be(int statuss) {
-         Assert.assertEquals(statuss, response.statusCode());
+        Assert.assertEquals(statuss, response.statusCode());
     }
     @Then("Verify Response ContentType is {string}")
     public void verify_response_content_type_is(String contenttype) {
