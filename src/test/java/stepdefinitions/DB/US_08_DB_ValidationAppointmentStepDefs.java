@@ -27,8 +27,6 @@ public class US_08_DB_ValidationAppointmentStepDefs {
         DBUtils.executeQuery(query);
     }
 
-
-
     @Then("user reads all the  columnIds data")
     public void userReadsAllTheColumnData() throws SQLException {
 
@@ -37,14 +35,12 @@ public class US_08_DB_ValidationAppointmentStepDefs {
             getId.add(DBUtils.getResultset().getInt(1));   }
     }
 
-
     @Then("verify that {int} should be in appointment list")
     public void verifyThatShouldBeInAppointmentList(int arg0) {
 
         System.out.println("idsList :"+getId);
         Assert.assertTrue(getId.contains(10586));
     }
-
 
     @And("close the connectionHA")
     public void closeTheConnectionHA() {
