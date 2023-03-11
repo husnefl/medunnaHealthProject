@@ -18,11 +18,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions","hooks"},
         dryRun = false,
-<<<<<<< HEAD
-        tags = "@US07"
-=======
-        tags = "@MedunnaApiGetTest"
->>>>>>> main
+        tags = "@US30DataBaseTest"
+
 )
 public class Runner {
 
