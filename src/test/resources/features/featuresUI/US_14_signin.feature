@@ -1,4 +1,4 @@
-@US_14
+@US_14 @regression
 Feature: My Appointments / Edit / Test Results by Physician (Doctor)
 
 
