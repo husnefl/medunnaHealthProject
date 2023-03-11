@@ -20,8 +20,7 @@ public class US_10ApiStepDefs {
 
 
     @Given("user set the urlulf {string}")
-    public void user_set_the_urlulf(String URL) {
-
+    public void user_set_the_url(String URL) {
      url=URL;
     }
 
@@ -37,15 +36,17 @@ public class US_10ApiStepDefs {
      response.prettyPrint();
     }
 
-// @Then("HTTP StatusCode should be {int}")
-// public void http_status_code_should_be(Integer status) {
-// assertEquals(200,response.statusCode());
+ @Then("HTTP Status Code shouldulf be {int}")
+ public void http_status_code_shouldulf_be(Integer int1) {
+  assertEquals(200,response.statusCode());
 
- //}
+ }
  @Then("Verify response content type isulf {string}")
  public void verify_response_content_type_is(String string) {
   assertEquals(string,response.contentType());
  }
+
+
  @Then("Verify expected values and actual values should be sameulf")
  public void verify_expected_values_and_actual_values_should_be_same() {
 
