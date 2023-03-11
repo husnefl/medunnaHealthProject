@@ -1,13 +1,13 @@
 package hooks;
 
 import io.cucumber.java.After;
-        import io.cucumber.java.Scenario;
-        import io.cucumber.java.Before;
-        import org.openqa.selenium.OutputType;
-        import org.openqa.selenium.TakesScreenshot;
-        import utilities.Driver;
+import io.cucumber.java.Scenario;
+import io.cucumber.java.Before;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import utilities.Driver;
 
-        import static base_urls.MedunnaBaseUrl.medunnaSetUp;
+import static base_urls.MedunnaBaseUrl.medunnaSetUp;
 
 public class Hook {
     @After
@@ -21,8 +21,18 @@ public class Hook {
             Driver.closeDriver();
         }
     }
-    @Before("@medunna_UserName_Email")
+
+    @Before("@us_18test")
     public void beforeApi(){// this method will run before TC03_Api
         medunnaSetUp();
     }
 }
+
+
+
+
+
+
+
+
+
