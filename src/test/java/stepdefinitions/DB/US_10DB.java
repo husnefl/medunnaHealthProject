@@ -1,5 +1,6 @@
 package stepdefinitions.DB;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -24,15 +25,15 @@ public class US_10DB {
         DBUtils.executeQuery(query);
 
     }
-    @Given("user reads all the  columnIds data")
-    public void user_reads_all_the_column_ids_data() throws SQLException {
+    @And("user reads all the  columnIds dataIU")
+    public void userReadsAllTheColumnIdsDataIU() throws SQLException {
         while (DBUtils.getResultset().next()){
 
             getId.add(DBUtils.getResultset().getInt(1));   }
 
     }
-    @Then("verify that {int} should be in patient list")
-    public void verify_that_should_be_in_patient_list(Integer int1) {
+    @Then("verify that {int} should be in patient listIU")
+    public void verifyThatShouldBeInPatientListIU(int arg0) {
         System.out.println("idsList :"+getId);
         Assert.assertTrue(getId.contains(5972));
 
@@ -42,5 +43,7 @@ public class US_10DB {
         DBUtils.closeConnection();
     }
 
-    }
+
+
+}
 
