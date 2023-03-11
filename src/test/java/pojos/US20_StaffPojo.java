@@ -5,18 +5,28 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class US20_StaffPojo {
 
-    private  String firstName;
-    private  String lastName;
-    private  String phone;
-    private  String ssn;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String ssn;
+    private Integer id;
     private US20_User_innerPojo user;
 
-    public US20_StaffPojo(String firstName, String lastName, String phone, String ssn, US20_User_innerPojo user) {
+    public US20_StaffPojo(String firstName, String lastName, String phone, String ssn, US20_User_innerPojo user, Integer id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
         this.ssn = ssn;
         this.user = user;
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public US20_StaffPojo() {
@@ -69,6 +79,7 @@ public class US20_StaffPojo {
                 ", lastName='" + lastName + '\'' +
                 ", phone='" + phone + '\'' +
                 ", ssn='" + ssn + '\'' +
+                ", id=" + id +
                 ", user=" + user +
                 '}';
     }

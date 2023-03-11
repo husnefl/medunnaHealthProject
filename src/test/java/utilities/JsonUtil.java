@@ -5,7 +5,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import java.io.IOException;
 
 public class JsonUtil {
-    private static ObjectMapper mapper;
+    protected static ObjectMapper mapper;
 
     static {
         mapper = new ObjectMapper();

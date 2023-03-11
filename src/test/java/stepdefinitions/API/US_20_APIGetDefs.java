@@ -17,8 +17,6 @@ import static utilities.AuthenticationMedunna.generateToken;
 public class US_20_APIGetDefs {
     Faker faker = new Faker();
     Response response;
-    US20_User_innerPojo us20_user_innerPojo=new US20_User_innerPojo();
-    US20_StaffPojo us20_staffPojo=new US20_StaffPojo();
 
     @Given("users set the url and get request FC")
     public void users_set_the_url_and_get_request_fc() {

@@ -9,10 +9,13 @@ public class US20_User_innerPojo {
     private Boolean activated;
     private String ssn;
 
-    public US20_User_innerPojo(String login, Boolean activated, String ssn) {
+    private Integer id;
+
+    public US20_User_innerPojo(String login, Boolean activated, String ssn, Integer id) {
         this.login = login;
         this.activated = activated;
         this.ssn = ssn;
+        this.id = id;
     }
 
     public US20_User_innerPojo() {
@@ -42,12 +45,21 @@ public class US20_User_innerPojo {
         this.ssn = ssn;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "US20_User_innerPojo{" +
                 "login='" + login + '\'' +
                 ", activated=" + activated +
                 ", ssn='" + ssn + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
 }
