@@ -19,6 +19,7 @@ public class US_01_TC_05UserApiPostStepDefs {
     Response response;
     US_01MedunnaUsersPojo expectedData;
 
+
     Faker faker = new Faker();
     String url;
 
@@ -66,7 +67,3 @@ public class US_01_TC_05UserApiPostStepDefs {
 
  
 }
- 
- 
- 
- 
