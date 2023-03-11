@@ -51,7 +51,6 @@ public class US_04Stepdefinitions {
     public void goesToActivationPageUrl() {
         ReusableMethods.waitFor(3);
         Driver.getDriver().navigate().to("https://www.medunna.com/admin/user-management?page=21&sort=id,asc");
-        Driver.getDriver().manage().window().maximize();
         ReusableMethods.waitFor(3);
     }
 

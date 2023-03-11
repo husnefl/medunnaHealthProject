@@ -1,4 +1,4 @@
-@Appointment_Get_Request
+@Appointment_Get_Request @regression
 Feature: Appointment_Get_Request
 
   Scenario:TC_12_Verify Appointment by sending get request

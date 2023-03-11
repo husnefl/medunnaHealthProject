@@ -39,6 +39,11 @@ public class US_05_HomePage {
     @FindBy(xpath = "//span[text()='Search Patient']")
     public WebElement searchPatientOption;
 
+    @FindBy(xpath = "//span[text()='Administration']")
+    public WebElement administrationDropdown;
+
+    @FindBy(xpath = "//span[text()='User management']")
+    public WebElement userManagementOption;
 
 
 

@@ -1,4 +1,4 @@
-@US07
+@US07  @smoke
 Feature: User info segment (User Settings) should be editable on Homepage
 
 

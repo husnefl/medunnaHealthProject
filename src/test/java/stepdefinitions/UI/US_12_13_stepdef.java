@@ -39,7 +39,7 @@ public class US_12_13_stepdef {
     }
     @When("enter {string} in username input12")
     public void enter_in_username_input(String username) {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(3);
         us_12_13_page.usernameInput.sendKeys(username);
     }
     @When("enter {string} in password input12")
@@ -51,6 +51,7 @@ public class US_12_13_stepdef {
     public void click_on_sign_in_submit_button() {
         ReusableMethods.waitFor(1);
         us_12_13_page.signInSubmitButton.click();
+        ReusableMethods.waitFor(3);
     }
     @When("click on MY PAGES12")
     public void click_on_my_pages() {
@@ -81,7 +82,7 @@ public class US_12_13_stepdef {
     }
     @Then("Doctor fills in required fields, anemnesis, treatment, diagnosis12")
     public void doctor_fills_in_required_fields_anemnesis_treatment_diagnosis() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_12_13_page.anamnesisfield.clear();
         us_12_13_page.anamnesisfield.sendKeys("no surgery");
         us_12_13_page.treatmentfield.clear();
@@ -182,7 +183,7 @@ public class US_12_13_stepdef {
 
         ReusableMethods.waitFor(1);
         us_12_13_page.diagnosisfield.clear();
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitFor(1);
         Assert.assertTrue(us_12_13_page.emptyfieldmessage.isDisplayed());
 
     }
@@ -249,7 +250,7 @@ public class US_12_13_stepdef {
 
 
     //us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01//us13tc01
-    @And("click on {string} button12")
+    @And("click on {string} button13")
     public void clickOnButton(String arg0) {
         ReusableMethods.waitFor(1);
         us_12_13_page.requestatestButton.click();
@@ -258,7 +259,7 @@ public class US_12_13_stepdef {
     }
 
 
-    @And("click on {string} check mark12")
+    @And("click on {string} check mark13")
     public void clickOnCheckMark(String arg0) {
         ReusableMethods.waitFor(1);
         JSUtils.clickElementByJS(us_12_13_page.insulinCheckBox);
@@ -266,14 +267,14 @@ public class US_12_13_stepdef {
 
     }
 
-    @Then("verify user see success popup message12")
+    @Then("verify user see success popup message13")
     public void verifyUserSeeSuccessPopupMessage() {
         ReusableMethods.waitFor(1);
         ReusableMethods.verifyElementDisplayed(us_12_13_page.testCreatedSuccessMessage);
 
     }
 
-    @Then("verify {string} {string} {string} {string} {string} {string}  {string} has checkmark options12")
+    @Then("verify {string} {string} {string} {string} {string} {string}  {string} has checkmark options13")
     public void verifyHasCheckmarkOptions(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6) {
         List<WebElement> checkboxlist=us_12_13_page.checkBoxes;
         System.out.println(checkboxlist.size());
@@ -287,10 +288,6 @@ public class US_12_13_stepdef {
 
 
 //input[@type='checkbox']
-
-
-
-
 
 
 }
