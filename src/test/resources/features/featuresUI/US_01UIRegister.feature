@@ -1,4 +1,4 @@
-@medunna_register
+@medunna_register @smoke
 
 Feature:SSN_Validation
 
@@ -22,7 +22,7 @@ Feature:SSN_Validation
 
     Examples: register_ssn
       | SSN_number  | first_name | last_name | user_name        | user_email        | user_password | user_confirm_password |
-      | 458-59-4539 | Tomyy     | Cruiseyy   | DoctorCruiseyy | cruiseyy@gmail.com | Tom20yy        | Tom20yy                |
+      | 472-59-9569 | Tommb     | Cruisemb   | DoctorCruisemb | cruisemb@gmail.com | Tom20mb        | Tom20mb                |
 
 
   Scenario Outline: TC01_Validation_SSN_Number

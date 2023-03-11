@@ -26,26 +26,26 @@ public class US_01RegisterStepDefs {
 
     @Given("user goes to medunna homePage")
     public void user_goes_to_medunna_home_page() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
 
     }
 
     @When("user clicks user icon")
     public void user_clicks_user_icon() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.userIcon.click();
     }
 
     @And("user clicks Register option")
     public void user_clicks_register_option() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.registerOption.click();
     }
 
     @When("user enters the SSN number {string}")
     public void user_enters_the_ssn_number(String SSN) {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.ssnNumber.sendKeys(SSN);
 
         if (SSN.length() != 11 || SSN.charAt(3) != '-' || SSN.charAt(6) != '-') {
@@ -61,11 +61,11 @@ public class US_01RegisterStepDefs {
     }
     @When("user enters the first name {string}")
     public void user_enters_the_first_name(String firstname) {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.firstName.sendKeys(firstname);
 
         if (firstname.length() == 0) {
-            ReusableMethods.waitFor(1);
+            ReusableMethods.waitFor(2);
             us_01HomePage.lastName.click();
             System.out.println(us_01HomePage.invalidSSNText.getText());
             us_01HomePage.invalidFirstNameText.isDisplayed();
@@ -76,21 +76,21 @@ public class US_01RegisterStepDefs {
 
     @When("user enters the last name {string}")
     public void user_enters_the_last_name(String lastname) {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.lastName.sendKeys(lastname);
 
     }
 
     @When("user enters the user name {string}")
     public void user_enters_the_user_name(String username) {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.userName.sendKeys(username);
     }
 
 
     @And("user enters the user email {string}")
     public void userEntersTheUserEmail(String email) {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.email.sendKeys(email);
     }
 
@@ -102,31 +102,31 @@ public class US_01RegisterStepDefs {
 
     @When("user enters the user confirm new password {string}")
     public void user_enters_the_user_confirm_new_password(String confirmationpassword) {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.newConfirmPassword.sendKeys(confirmationpassword);
     }
 
 
     @When("user clicks the register button")
     public void user_clicks_the_register_button() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.registerButton.click();
     }
 
     @When("admin clicks on user icon")
     public void adminClicksOnUserIcon() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.userIcon.click();
     }
     @When("admin clicks Sign in option")
     public void user_clicks_sign_in_option() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.signInOption.click();
     }
 
     @When("admin enters user's name {string} in field")
     public void user_enters_user_s_name_in_field(String adminusername) {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.usernameInput.sendKeys(adminusername);
     }
 
@@ -139,7 +139,7 @@ public class US_01RegisterStepDefs {
 
     @And("admin on Remember Me checkbox")
     public void clickOnRememberMeCheckbox() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.rememberMeCheckbox.click();
     }
 
@@ -150,7 +150,7 @@ public class US_01RegisterStepDefs {
 
     @And("admin clicks Administration section")
     public void userClicksAdministrationSection() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_01HomePage.administirationSection.click();
 
     }

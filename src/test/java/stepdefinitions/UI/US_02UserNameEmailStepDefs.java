@@ -29,6 +29,7 @@ public class US_02UserNameEmailStepDefs {
     @When("user enters the SsnNumber {string}")
     public void user_enters_the_ssn_number(String SSNNumber) {
         SSNNumber=faker.idNumber().ssnValid();
+     ReusableMethods.waitFor(2);
        us_01HomePage.ssnNumber.sendKeys(SSNNumber);
         System.out.println(SSNNumber);
 
@@ -38,13 +39,13 @@ public class US_02UserNameEmailStepDefs {
     @When("user enters the firstName {string}")
     public void user_enters_the_first_name(String FirstName) {
         us_01HomePage.firstName.sendKeys(faker.name().firstName());
-
+        ReusableMethods.waitFor(1);
 
     }
     @When("user enters the lastName {string}")
     public void user_enters_the_last_name(String lastName) {
         us_01HomePage.lastName.sendKeys(faker.name().lastName());
-
+        ReusableMethods.waitFor(1);
 
     }
     @When("user enters the userName {string}")
@@ -52,7 +53,7 @@ public class US_02UserNameEmailStepDefs {
 
 
         us_01HomePage.userName.sendKeys(faker.name().username());
-
+        ReusableMethods.waitFor(1);
 
 
     }
@@ -60,6 +61,7 @@ public class US_02UserNameEmailStepDefs {
     public void user_enters_the_user_email(String userEmail) {
 
         us_01HomePage.email.sendKeys(faker.internet().emailAddress());
+        ReusableMethods.waitFor(1);
     }
     @When("user enters the userNewPasword and confirm password {string}")
 
@@ -67,6 +69,7 @@ public class US_02UserNameEmailStepDefs {
         String password = faker.internet().password();
         us_01HomePage.newPassword.sendKeys(password);
         us_01HomePage.newConfirmPassword.sendKeys(password);
+        ReusableMethods.waitFor(1);
 
     }
 
@@ -80,6 +83,7 @@ public class US_02UserNameEmailStepDefs {
     public void verify_that_username_cannot_be_blank() {
 
         Assert.assertFalse(us_01UserManagementPage.loginUserName.getText().isBlank());
+        ReusableMethods.waitFor(2);
 
 
     }
@@ -88,27 +92,31 @@ public class US_02UserNameEmailStepDefs {
     @And("admin click the edit button")
     public void adminClickTheEditButton() {
         JSUtils.clickElementByJS(us_01UserManagementPage.editButton);
+        ReusableMethods.waitFor(1);
 
         JSUtils.clickElementByJS(us_01UserManagementPage.activationCheckbox);
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(1);
         WebElement dropdown= us_01UserManagementPage.selectOptions;
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(1);
         Select select = new Select(dropdown);
         select.selectByIndex(4);
-
+        ReusableMethods.waitFor(1);
         JSUtils.clickElementByJS(us_01UserManagementPage.editSaveButton);
-
+        ReusableMethods.waitFor(1);
     }
 
 
 
     @Then("verify that email has @ and .")
     public void verifyThatEmailHasAnd() {
+        ReusableMethods.waitFor(1);
 
         String emailRegex="^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
         Pattern pattern=Pattern.compile(emailRegex);
         Assert.assertTrue(pattern.matcher( userEmail).matches());
-
+        ReusableMethods.waitFor(1);
 
 
     }
@@ -116,14 +124,14 @@ public class US_02UserNameEmailStepDefs {
 
     @Then("verify that email is not blank")
     public void verifyThatEmailIsNotBlank() {
-
+        ReusableMethods.waitFor(1);
         Assert.assertFalse(userEmail.isBlank());
 
     }
 
     @Then("verify email length should be greater zero")
     public void verifyEmailLengthShouldBeGreaterZero() {
-
+        ReusableMethods.waitFor(1);
         Assert.assertTrue(userEmail .length()!=0);
 
 

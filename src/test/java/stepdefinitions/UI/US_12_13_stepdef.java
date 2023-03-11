@@ -39,7 +39,7 @@ public class US_12_13_stepdef {
     }
     @When("enter {string} in username input12")
     public void enter_in_username_input(String username) {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(3);
         us_12_13_page.usernameInput.sendKeys(username);
     }
     @When("enter {string} in password input12")
@@ -81,7 +81,7 @@ public class US_12_13_stepdef {
     }
     @Then("Doctor fills in required fields, anemnesis, treatment, diagnosis12")
     public void doctor_fills_in_required_fields_anemnesis_treatment_diagnosis() {
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(2);
         us_12_13_page.anamnesisfield.clear();
         us_12_13_page.anamnesisfield.sendKeys("no surgery");
         us_12_13_page.treatmentfield.clear();
@@ -182,7 +182,7 @@ public class US_12_13_stepdef {
 
         ReusableMethods.waitFor(1);
         us_12_13_page.diagnosisfield.clear();
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitFor(1);
         Assert.assertTrue(us_12_13_page.emptyfieldmessage.isDisplayed());
 
     }
