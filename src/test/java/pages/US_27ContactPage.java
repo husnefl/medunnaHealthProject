@@ -1,5 +1,6 @@
 package pages;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -47,23 +48,8 @@ public class US_27ContactPage {
     @FindBy(xpath = "//body//div[3]/p")
     public WebElement phoneNumber;
 
-
-
-
-
-
-//*[@id="contact"]/div[1]/div/h2/text()
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[@id='register-submit']")
+    public WebElement sendButton;
 
 
 

@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},
         dryRun = false,
 
-        tags = "@medunna_register"
+        tags = "@AnyUser_Contact_Message"
 )
 public class Runner {
 }
