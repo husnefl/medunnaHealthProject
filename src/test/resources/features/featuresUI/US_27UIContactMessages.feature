@@ -29,5 +29,3 @@ Feature:Staff_Search
       | Tom Hanks | tomhanks@gmail.com | appointment info | hi          |
 
 
-#Any user who would like to have info or describe a concern can use Contact portal to provide
-#information or request info
