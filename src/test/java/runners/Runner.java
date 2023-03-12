@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},
         dryRun = false,
 
-        tags = "@08_API"
+        tags = "@regression"
 )
 public class Runner {
 }

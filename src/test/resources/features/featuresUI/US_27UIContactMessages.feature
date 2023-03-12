@@ -23,6 +23,7 @@ Feature:Staff_Search
     And user enters Subject "<subjectUser>" in subject field
     And user enters Message "<messageUser>" in message field
 
+
     Examples: ContactInfo
       | nameUser  | emailUser          | subjectUser      | messageUser |
       | Tom Hanks | tomhanks@gmail.com | appointment info | hi          |
