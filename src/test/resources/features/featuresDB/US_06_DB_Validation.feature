@@ -1,4 +1,4 @@
-@US06_DB_Testing @regression
+@US06_DB_Testing
 Feature:DB_Appointment_Validation
   Scenario: TC_13 Verify patient appointment information
     Given user connects to the databaseYA

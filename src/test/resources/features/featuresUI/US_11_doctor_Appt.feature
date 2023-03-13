@@ -1,4 +1,4 @@
-@UI_Dr_Appt @regression
+@UI_Dr_Appt
 Feature: Ui_Feature
 
   Background:Login
