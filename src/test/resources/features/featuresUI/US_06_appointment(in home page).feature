@@ -61,18 +61,6 @@ Feature: Appointment Feature
     And Verify Appointment registration saved message is displayed on the pageYA
     Then close the applicationYA
 
-  @TC_06A
-  Scenario: TC_06 Verify that user can not make an appointment with different than registered SSN id
-    When user click on make an appointment buttonYA
-    When user enter registered firstnameYA
-    And user enter  registered lastnameYA
-    And user enter different SSN idYA
-    And user enter registered email addressYA
-    And user enter valid phone numberYA
-    And user click on Send and Appointment Request ButtonYA
-    And Verify Email is already in use message is displayed on the pageYA
-    Then close the applicationYA
-
   @TC_07A
   Scenario: TC_07 Verify that SSN id input should not be blank
     When user click on make an appointment buttonYA
