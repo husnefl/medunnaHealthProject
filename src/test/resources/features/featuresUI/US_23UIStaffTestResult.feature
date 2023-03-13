@@ -1,4 +1,4 @@
-@staff_search_byssn @regression
+@staff_search_byssn
 Feature:Staff_Search
 
 

@@ -1,5 +1,5 @@
 
-@AnyUser_Contact_Message
+@AnyUser_Contact_Message @regression
 Feature:Staff_Search
 
       Background:contact_info

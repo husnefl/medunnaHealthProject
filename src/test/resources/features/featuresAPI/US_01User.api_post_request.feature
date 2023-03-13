@@ -1,4 +1,4 @@
-@MedunnaApiPostTest @regression
+@MedunnaApiPostTest
 Feature:Api_Feature
 
   @Api

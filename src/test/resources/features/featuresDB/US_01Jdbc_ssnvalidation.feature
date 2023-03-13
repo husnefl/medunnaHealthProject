@@ -1,4 +1,4 @@
-@db_validation_ssn @regression
+@db_validation_ssn
  Feature: db_customer_testing
 
 
