@@ -1,4 +1,4 @@
-@us_12_13_medunnadoctor @egression
+@us_12_13_medunnadoctor
 Feature: US_12_medunna_doctor
 
   Background: Signin Medunna

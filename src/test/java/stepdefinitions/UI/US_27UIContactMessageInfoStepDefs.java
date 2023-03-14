@@ -1,9 +1,12 @@
 package stepdefinitions.UI;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.US_27ContactPage;
+import utilities.JSUtils;
 import utilities.ReusableMethods;
+
 
 public class US_27UIContactMessageInfoStepDefs {
 
@@ -61,11 +64,10 @@ public class US_27UIContactMessageInfoStepDefs {
     public void user_enters_message_in_message_field(String message) {
         us_27ContactPage.message.sendKeys(message);
 
-
-
     }
 
-
-
-
+    @And("user clicks message send button")
+    public void userClicksMessageSendButton() {
+        JSUtils.clickElementByJS(us_27ContactPage.sendButton);
+    }
 }

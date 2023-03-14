@@ -1,4 +1,4 @@
-@medunna_register @smoke
+@medunna_register
 
 Feature:SSN_Validation
 

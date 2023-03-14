@@ -53,6 +53,6 @@ Feature:UsernameEmail_Validation
   Scenario: TC04_Validation_not_blank
     Then verify that email is not blank
     Then verify email length should be greater zero
-    Then close the applicationmb
+    Then close the applicationYA
 
 

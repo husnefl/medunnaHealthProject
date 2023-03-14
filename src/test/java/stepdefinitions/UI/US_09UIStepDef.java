@@ -10,7 +10,11 @@ public class US_09UIStepDef {
     US_09UIpage page=new US_09UIpage();
     @Given("user clicks the logIn dropdown")
     public void userClicksTheLogInDropdown() {
-        Driver.getDriver().get(ConfigReader.getProperty("medunna_login_url"));
+
+        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
+
+        //Driver.getDriver().get(ConfigReader.getProperty("medunna_login_url"));
+
         page.loginDropDown.click();
     }
     @And("user clicks on the signIn button")
@@ -52,6 +56,10 @@ public class US_09UIStepDef {
     }
     @Then("user verifies password changed successfully")
     public void userVerifiesPasswordChangedSuccessfully() {
+
+       // page.passwordStrength1.isDisplayed();
+
         page.passwordStrength1.isDisplayed();
+
     }
 }

@@ -1,5 +1,5 @@
 
-@AnyUser_Contact_Message
+@AnyUser_Contact_Message @regression
 Feature:Staff_Search
 
       Background:contact_info
@@ -23,10 +23,9 @@ Feature:Staff_Search
     And user enters Subject "<subjectUser>" in subject field
     And user enters Message "<messageUser>" in message field
 
+
     Examples: ContactInfo
       | nameUser  | emailUser          | subjectUser      | messageUser |
       | Tom Hanks | tomhanks@gmail.com | appointment info | hi          |
 
 
-#Any user who would like to have info or describe a concern can use Contact portal to provide
-#information or request info
