@@ -6,13 +6,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import pojos.US20_StaffPojo;
 import pojos.US20_User_innerPojo;
 import utilities.JsonUtil;
 
-
-import java.util.Optional;
 
 import static base_urls.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
@@ -49,7 +46,7 @@ public class US_20APIPutDefs {
     public void userGetsThePutResponseDataAndValidatesFC() {
         //Do assertion
 
-        US20_StaffPojo actualData=JsonUtil.convertJsonToJavaObject(response.asString(),US20_StaffPojo.class);
+        US20_StaffPojo actualData= JsonUtil.convertJsonToJavaObject(response.asString(),US20_StaffPojo.class);
         assertEquals(expectedData.getSsn(),actualData.getSsn());
 
 

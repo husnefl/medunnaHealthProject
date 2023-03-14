@@ -19,6 +19,7 @@ Feature: US_12_medunna_doctor
       And  click on save button12
       Then Verify appointment is saved successfully12
       Then click on user icon12
+      Then close the applicationmb
 
 
 

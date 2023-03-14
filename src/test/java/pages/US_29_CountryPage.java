@@ -28,7 +28,7 @@ public class US_29_CountryPage {
     @FindBy(xpath = "//div[contains(text(),'A Country is deleted with')]")
     public WebElement countryDeletedMessage;
 
-    @FindBy(xpath = "(//span[text()='Delete'])[11]")
+    @FindBy(xpath = "(//span[text()='Delete'])[12]")
     public WebElement deleteButton;
 
 

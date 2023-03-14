@@ -10,9 +10,9 @@ import static io.restassured.RestAssured.given;
 
 public class AuthenticationMedunna {
 
-    public static String generateToken() {
 
-        Map<String, Object> med = new HashMap<>();
+    public static String generateToken() {
+        Map<String, Object> med= new HashMap<>();
         med.put("password", "Batch81+");
         med.put("rememberMe", true);
         med.put("username", "Batch81");
@@ -26,4 +26,18 @@ public class AuthenticationMedunna {
         return response.jsonPath().getString("id_token");
 
     }
+// password "Batch81+"
+    //"rememberMe"=true
+    //username="Batch81"
+
+
+
+
+
+
+
+
+
+
+
 }

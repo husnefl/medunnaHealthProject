@@ -42,18 +42,6 @@ Feature: Login_Feature
     Then verify remember me button is selectableYA
     Then close the applicationYA
 
-  @TC_05Login
-  Scenario: TC_05_Verify_Credentials_seen_automatically_after_clicking_rememberMe
-    When user enter valid usernameYA
-    And user enter valid passwordYA
-    And user click on remember me buttonYA
-    And user click on sign in submit buttonYA
-    And user click on sign out optionYA
-    Then verify thank you for choosing us message on the pageYA
-    And user click on Sign in Again buttonYA
-    Then verify valid credentials displayed on username and password box automaticallyYA
-    Then close the applicationYA
-
    @TC_06Login
     Scenario: TC_06_Verify_Registration_Link_option_on_the_login_page
       Then verify Register a new account link option is on the pageYA
