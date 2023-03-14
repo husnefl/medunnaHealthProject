@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.US_29_CountryPage;
+import utilities.JSUtils;
 import utilities.ReusableMethods;
 
 public class US_29_CountryStepDefinition {
@@ -42,7 +43,8 @@ public class US_29_CountryStepDefinition {
 
     @When("Click on Delete button of the last created countryYA")
     public void click_on_delete_button_of_the_last_created_country_ya() {
-       us_29_countryPage.deleteButton.click();
+        JSUtils.scrollIntoViewJS(us_29_countryPage.deleteButton);
+        JSUtils.clickElementByJS(us_29_countryPage.deleteButton);
 
     }
     @Then("Verify country is deleted message displayed on the pageYA")
