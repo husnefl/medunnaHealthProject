@@ -22,7 +22,7 @@ public class Hook {
         }
     }
 
-    @Before("@us_18test")
+    @Before("@US_28APIPost")
     public void beforeApi(){// this method will run before TC03_Api
         medunnaSetUp();
     }

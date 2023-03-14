@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},
         dryRun = false,
 
-        tags = "@08_API"
+        tags = "@US_28APIPost"
 )
 public class Runner {
 }

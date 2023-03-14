@@ -38,15 +38,11 @@ public class US_28ApiPostStepDef {
     @Given("user should validate creating messages")
     public void user_should_validate_creating_messages() {
 
-
         actualData = response.as(US_28APIpojo.class);
 
         assertEquals(expectedData.getName(),actualData.getName());
         assertEquals(expectedData.getEmail(),actualData.getEmail());
         assertEquals(expectedData.getSubject(),actualData.getSubject());
         assertEquals(expectedData.getMessage(),actualData.getMessage());
-
     }
-
-
 }

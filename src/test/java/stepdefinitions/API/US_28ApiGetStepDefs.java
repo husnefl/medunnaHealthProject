@@ -14,33 +14,24 @@ import static utilities.AuthenticationMedunna.generateToken;
 
 public class US_28ApiGetStepDefs {
 
-    US_28APIpojo actualData;
+
     Response response;
     US_28APIpojo expectedData;
-
     //https://medunna.com/api/c-messages/16628
-
-    @Given("user set the urlmedunna to get request")
+    @Given("user set the urlmedunna to get requestUI")
     public void user_set_the_urlmedunna_to_get_request() {
-
-        spec.pathParams("first","api","second","c-messages","third","16628");
-
+        spec.pathParams("first","api","second","c-messages","third",16628);
     }
-    @Given("get a get-request to validate messages")
+    @Given("get a get-request to validate messagesUI")
     public void get_a_get_request_to_validate_messages() {
-        expectedData=new US_28APIpojo("Hasan","hasan@gmail.com","status","how are you");
-
+        //expectedData=new US_28APIpojo("Hasan","hasan@gmail.com","status","how are you");
         response=given().spec(spec).headers("Authorization","Bearer " + generateToken(),"Content-Type",
                 ContentType.JSON,"Accept", ContentType.JSON).when().get("/{first}/{second}/{third}");
         response.prettyPrint();
     }
-
-    @Then("user should validate expected value actual value")
+    @Then("user should validate expected value actual valueUI")
     public void user_should_validate_expected_value_actual_value() {
-
-
         JsonPath jsonPath = response.jsonPath();
-
         //Hard Assertion
         assertEquals("Hasan",jsonPath.getString("name"));
         assertEquals("hasan@gmail.com",jsonPath.getString("email"));
