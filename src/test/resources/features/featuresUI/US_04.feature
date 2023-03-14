@@ -1,4 +1,4 @@
-@US04 @smoke
+@US04
 Feature: An admin must activate the registered user otherwise user should not be able to login.
 
   Background:

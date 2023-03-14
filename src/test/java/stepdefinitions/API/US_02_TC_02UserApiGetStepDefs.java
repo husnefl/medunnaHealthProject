@@ -31,6 +31,7 @@ public class US_02_TC_02UserApiGetStepDefs {
 
         response = given().spec(spec).headers("Authorization","Bearer " + generateToken(),"Content-Type", ContentType.JSON,"Accept", ContentType.JSON).
                 when().get("/{first}/{second}");
+        response.prettyPrint();
 
 
     }

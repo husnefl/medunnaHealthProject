@@ -21,4 +21,6 @@ Feature: Ui_Feature
   @TC_02
   Scenario:User(doctor) can see patient id, start date, end date, status…HU
     Then Verify that patient id, start date, end date, statusHU
+    Then close the applicationmb
+
 

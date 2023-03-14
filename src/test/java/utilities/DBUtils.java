@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 public class DBUtils {
+
+
     //    connection : used to connect to DB
     private static Connection connection;
     //    statement : used to write queries
@@ -18,8 +20,12 @@ public class DBUtils {
      */
     public static void createConnection() {
         String url = "jdbc:postgresql://157.230.48.97:5432/medunna_db_v2";
-        String username="select_user";
-        String password="Medunna_pass_@6";
+//        String username="techprodb_user";
+//        String password="Techpro_@126";
+//        gmibank_db
+//           Database Name: medunna_db_v2
+       String  username="select_user";
+       String  password="Medunna_pass_@6";
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -28,7 +34,7 @@ public class DBUtils {
         }
     }
     /**
-     * DBUtils.executeQuery(String query); -> Execute the query and store in the result set object
+     * DBUtils.executeQuery(String query); -> Execute the query and store is the result set object
      * STATEMENT : is used to write query
      */
     public static void executeQuery(String query) {
@@ -62,8 +68,6 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
-
-
     public static Connection getConnection() {
         String url = "jdbc:sqlserver://184.168.194.58:1433;databaseName=crystalkeyhotels2;user=Ahmet_User;password=Ahmet123!";
         String username="Ahmet_User";
@@ -76,7 +80,6 @@ public class DBUtils {
         }
         return connection;
     }
-
     //used to get statement
     public static Statement getStatement() {
         try {
@@ -87,8 +90,6 @@ public class DBUtils {
         }
         return statement;
     }
-
-
     //Use this to get the ResutSet object
     public static ResultSet getResultset() {
         try {
@@ -99,15 +100,12 @@ public class DBUtils {
         }
         return resultSet;
     }
-
-    // This method returns the number of rows in a table in the database
+    // This method returns the number fo row in a table in the database
     public static int getRowCount() throws Exception {
         resultSet.last();
         int rowCount = resultSet.getRow();
         return rowCount;
     }
-
-
     /**
      * @return returns a single cell value. If the results in multiple rows and/or
      *         columns of data, only first column of the first row will be returned.
@@ -116,8 +114,6 @@ public class DBUtils {
     public static Object getCellValue(String query) {
         return getQueryResultList(query).get(0).get(0);
     }
-
-
     /**
      * @return returns a list of Strings which represent a row of data. If the query
      *         results in multiple rows and/or columns of data, only first row will
@@ -126,8 +122,6 @@ public class DBUtils {
     public static List<Object> getRowList(String query) {
         return getQueryResultList(query).get(0);
     }
-
-
     /**
      * @return returns a map which represent a row of data where key is the column
      *         name. If the query results in multiple rows and/or columns of data,
@@ -136,7 +130,6 @@ public class DBUtils {
     public static Map<String, Object> getRowMap(String query) {
         return getQueryResultMap(query).get(0);
     }
-
     /**
      * @return returns query result in a list of lists where outer list represents
      *         collection of rows and inner lists represent a single row
@@ -160,7 +153,6 @@ public class DBUtils {
         }
         return rowList;
     }
-
     /**
      * @return list of values of a single column from the result set
      */
@@ -179,10 +171,9 @@ public class DBUtils {
         }
         return rowList;
     }
-
     /**
      * @return returns query result in a list of maps where the list represents
-     *         collection of rows and a map represents a single row with
+     *         collection of rows and a map represents represent a single row with
      *         key being the column name
      */
     public static List<Map<String, Object>> getQueryResultMap(String query) {
@@ -204,7 +195,6 @@ public class DBUtils {
         }
         return rowList;
     }
-
     /*
      * @return List of columns returned in result set
      */
@@ -224,4 +214,17 @@ public class DBUtils {
         return columns;
     }
 
+<<<<<<< HEAD
 }
+=======
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> main

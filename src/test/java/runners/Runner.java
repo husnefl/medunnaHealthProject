@@ -19,7 +19,9 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions","hooks"},
         dryRun = false,
 
-        tags = "@us20_database"
+
+        tags = "@password"
+
 )
 public class Runner {
 }
