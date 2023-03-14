@@ -214,6 +214,9 @@ public class DBUtils {
         return columns;
     }
 
+<<<<<<< HEAD
+}
+=======
 
 
 
@@ -224,3 +227,4 @@ public class DBUtils {
 
 
 }
+>>>>>>> main
