@@ -8,7 +8,6 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 //import io.restassured.specification.RequestSpecification;
 
-import static base_urls.MedunnaBaseUrl.medunnaSetUp;
 import static base_urls.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
@@ -22,7 +21,7 @@ import static utilities.AuthenticationMedunna.generateToken;
 
 
 
-public class us18 {
+public class US_18_APIGetDefs {
 Response response;
 
     String url;
